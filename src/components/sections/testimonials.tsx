@@ -9,7 +9,7 @@ const testimonials = [
     role: "Macon depuis 15 ans",
     city: "Lyon",
     rating: 5,
-    text: "Avec Verassur, j'economise 2 400\u20ac par an sur ma decennale tout en ayant des garanties bien superieures. L'expertise BTP de leur equipe fait vraiment la difference.",
+    text: "Apres plusieurs comparatifs infructueux, je me suis tourne vers Verassur qui a fait le boulot avec rapidite et efficacite. Attestation recue en 2 jours.",
     tag: "Decennale",
   },
   {
@@ -65,7 +65,7 @@ export function Testimonials() {
             className="mt-4 text-base"
             style={{ color: "#144D2C", opacity: 0.6 }}
           >
-            Plus de 5 000 artisans proteges
+            Ce que nos clients disent de nous
           </p>
           {/* Stars */}
           <div className="mt-4 flex items-center justify-center gap-1">
@@ -75,18 +75,6 @@ export function Testimonials() {
                 className="h-5 w-5 fill-amber-400 text-amber-400"
               />
             ))}
-            <span
-              className="ml-2 text-sm font-bold"
-              style={{ color: "#03260E" }}
-            >
-              4.8/5
-            </span>
-            <span
-              className="text-sm"
-              style={{ color: "#144D2C", opacity: 0.4 }}
-            >
-              &nbsp;(312 avis)
-            </span>
           </div>
         </motion.div>
 

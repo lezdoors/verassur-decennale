@@ -68,22 +68,22 @@ export function HeroSection() {
           style={{ background: "rgba(20, 77, 44, 0.08)", color: "#144D2C" }}
         >
           <Shield className="h-3.5 w-3.5" />
-          Courtier agree ORIAS &middot; Tous profils acceptes
+          Tous profils acceptes &middot; Meme resilies et malusses
         </div>
 
         <h1
           className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
           style={{ color: "#03260E", letterSpacing: "-0.02em" }}
         >
-          Votre assurance decennale en 48h
+          Votre garantie decennale, simplement
         </h1>
 
         <p
           className="mt-5 text-lg leading-relaxed mx-auto max-w-xl"
           style={{ color: "#144D2C" }}
         >
-          Artisans et entreprises du BTP, meme resilies ou malusses. Nous
-          comparons +30 assureurs pour le meilleur tarif.
+          Protegez tous vos travaux avec les meilleures garanties.
+          Devis gratuit en 2 minutes, un courtier vous rappelle sous 24h.
         </p>
 
         {/* CTAs */}

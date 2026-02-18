@@ -10,36 +10,44 @@ import {
 
 const faqs = [
   {
-    q: "Qu'est-ce que l'assurance decennale ?",
-    a: "L'assurance decennale (ou garantie decennale) est une assurance obligatoire pour tous les professionnels du batiment en France. Elle couvre pendant 10 ans les dommages qui compromettent la solidite de l'ouvrage ou le rendent impropre a sa destination, conformement aux articles 1792 et suivants du Code civil.",
+    q: "Qu'est-ce que la garantie decennale ?",
+    a: "La garantie decennale est une assurance obligatoire imposee par la loi Spinetta de 1978 (articles L.241-1 et suivants du Code des assurances). Elle couvre pendant 10 ans apres la reception des travaux tous les dommages qui compromettent la solidite de l'ouvrage ou le rendent impropre a sa destination. Exemple : un macon realise des fondations, un affaissement survient 3 ans plus tard — la decennale prend en charge les reparations.",
   },
   {
-    q: "Suis-je oblige d'en avoir une ?",
-    a: "Oui, c'est une obligation legale pour tout professionnel du BTP intervenant sur des travaux de construction ou de renovation. Travailler sans assurance decennale vous expose a des sanctions penales et a une responsabilite financiere personnelle en cas de sinistre.",
+    q: "Qui doit souscrire une assurance decennale ?",
+    a: "Tout constructeur intervenant sur un ouvrage : entrepreneurs, artisans, auto-entrepreneurs, architectes, bureaux d'etude, promoteurs et ingenieurs-conseil. Peu importe votre statut juridique (auto-entrepreneur, SARL, SAS...), si vous realisez des travaux de construction ou de renovation touchant la structure d'un batiment, la decennale est obligatoire.",
+  },
+  {
+    q: "Pour quels travaux la decennale est-elle obligatoire ?",
+    a: "La decennale est obligatoire pour les travaux qui affectent la solidite du batiment ou le rendent inhabitable : fondations, ossature, murs porteurs, toiture, charpente, canalisations encastrees, chauffage central, installation electrique encastree. Les defauts purement esthetiques (rayure, tache) relevent de la RC Professionnelle, pas de la decennale.",
+  },
+  {
+    q: "Quelle difference entre decennale et dommage-ouvrage ?",
+    a: "La decennale est souscrite par le constructeur (maitre d'oeuvre). L'assurance dommage-ouvrage est souscrite par le proprietaire (maitre d'ouvrage). En cas de sinistre, la dommage-ouvrage indemnise le proprietaire rapidement sans attendre la recherche de responsabilite, puis l'assureur se retourne contre la decennale du constructeur.",
   },
   {
     q: "Mon assureur m'a resilie, puis-je quand meme etre assure ?",
-    a: "Absolument. C'est notre specialite. Que vous ayez ete resilie pour sinistres, non-paiement ou tout autre motif, nous travaillons avec des assureurs specialises dans les profils atypiques. Nous acceptons les coefficients de malus jusqu'a 3.50.",
+    a: "Oui. Nous travaillons avec des assureurs specialises dans les profils resilies et malusses. Que vous ayez ete resilie pour sinistres, non-paiement ou autre motif, nous trouvons une solution dans la grande majorite des cas. Remplissez le formulaire en indiquant votre situation — c'est exactement pour ca que nous existons.",
   },
   {
     q: "Combien coute une assurance decennale ?",
-    a: "Le tarif depend de votre metier, statut juridique, chiffre d'affaires et historique de sinistres. En moyenne : de 600\u20ac/an pour un auto-entrepreneur en finitions a plus de 4 000\u20ac/an pour un macon avec un CA important. Nos clients economisent en moyenne 35% par rapport a leur ancien contrat.",
+    a: "Le tarif depend de votre metier, statut juridique, chiffre d'affaires et historique de sinistres. Ordre de grandeur : a partir de 60€/mois pour un auto-entrepreneur en finitions, jusqu'a 300-400€/mois pour un macon avec un CA important. Les profils resilies ou malusses ont des tarifs plus eleves. Notre role est de comparer les offres pour obtenir le meilleur prix.",
   },
   {
-    q: "Combien de temps pour recevoir mon attestation ?",
-    a: "En general sous 48 heures apres validation de votre dossier. Pour les profils standards, l'attestation peut etre delivree le jour meme. Les profils resilies ou malusses peuvent necessiter un delai legerement plus long.",
+    q: "La decennale est-elle obligatoire pour un auto-entrepreneur ?",
+    a: "Oui, si vous exercez une activite assujettie a la decennale. Le statut auto-entrepreneur ne vous exonere pas de cette obligation. Les dommages decennaux doivent affecter la solidite de l'ouvrage ou le rendre impropre a sa destination pour etre couverts.",
   },
   {
-    q: "Quels travaux sont couverts par la decennale ?",
-    a: "Tous les travaux de construction, renovation, extension et amenagement qui touchent a la structure ou a l'etancheite du batiment. Cela inclut le gros oeuvre (fondations, murs, toiture), le second oeuvre (electricite, plomberie, menuiserie) et certaines finitions (carrelage, peinture) selon les termes du contrat.",
+    q: "Qu'est-ce que la garantie biennale (bon fonctionnement) ?",
+    a: "La garantie biennale couvre pendant 2 ans apres reception les dysfonctionnements lies aux equipements dissociables de l'ouvrage : pompes a chaleur, chauffe-eau, radiateurs, volets, gouttieres, portes (hors dormants), elements de cuisine. Elle est distincte de la decennale qui couvre les elements structurels.",
   },
   {
-    q: "Puis-je commencer un chantier sans attestation ?",
-    a: "Non, vous devez etre couvert avant le debut des travaux. L'attestation decennale doit etre fournie au maitre d'ouvrage avant l'ouverture du chantier. Travailler sans attestation valide engage votre responsabilite personnelle.",
+    q: "Que risque-t-on sans assurance decennale ?",
+    a: "Travailler sans decennale vous expose a des sanctions penales (amende pouvant aller jusqu'a 75 000€ et 6 mois de prison), une prise en charge financiere personnelle des reparations (dizaines voire centaines de milliers d'euros), et une perte de credibilite aupres de vos clients. Aucun maitre d'ouvrage serieux ne fera appel a un professionnel non assure.",
   },
   {
-    q: "Le devis est-il vraiment gratuit ?",
-    a: "Oui, notre devis est 100% gratuit et sans engagement. Nous sommes remuneres par les compagnies d'assurance sous forme de commission de courtage, il n'y a donc aucun frais supplementaire pour vous.",
+    q: "Comment obtenir l'attestation decennale d'une entreprise ?",
+    a: "Il suffit d'en faire la demande aupres de l'entreprise. L'attestation d'assurance decennale doit mentionner les activites couvertes, les plafonds de garantie et la periode de validite. Pour verifier qu'un contrat est bien en vigueur, vous pouvez contacter directement l'assureur mentionne sur l'attestation.",
   },
 ];
 
@@ -70,7 +78,7 @@ export function FAQ() {
             className="mt-4 text-base"
             style={{ color: "#144D2C", opacity: 0.6 }}
           >
-            Tout ce que vous devez savoir sur l&apos;assurance decennale
+            Tout savoir sur la garantie decennale, la loi Spinetta et vos obligations
           </p>
         </motion.div>
 

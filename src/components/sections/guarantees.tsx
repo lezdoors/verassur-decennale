@@ -5,53 +5,53 @@ import {
   Shield,
   Scale,
   Wrench,
-  HeadphonesIcon,
+  Building,
   FileCheck,
-  Layers,
+  AlertTriangle,
 } from "lucide-react";
 
 const guarantees = [
   {
     icon: Shield,
-    title: "Garantie decennale batiment",
+    title: "Garantie decennale",
     description:
-      "Jusqu'a 15 millions d'euros par sinistre pour les dommages structurels.",
-    amount: "15M\u20ac",
+      "Couvre pendant 10 ans tous les dommages compromettant la solidite de l'ouvrage ou le rendant impropre a sa destination. Obligation legale (loi Spinetta, 1978).",
+    badge: "10 ans",
   },
   {
     icon: Scale,
-    title: "RC Professionnelle integree",
+    title: "RC Professionnelle",
     description:
-      "Responsabilite civile jusqu'a 5 millions d'euros incluse sans franchise.",
-    amount: "5M\u20ac",
-  },
-  {
-    icon: FileCheck,
-    title: "Protection juridique BTP",
-    description:
-      "Defense et recours specialisee construction, incluse dans votre contrat.",
-    amount: "Incluse",
-  },
-  {
-    icon: HeadphonesIcon,
-    title: "Assistance 24h/24",
-    description:
-      "Equipe d'experts en construction disponible en cas de sinistre urgent.",
-    amount: "24/7",
+      "Couvre les dommages causes aux tiers pendant l'execution des travaux : degats chez un voisin, blessure sur chantier, erreur de conception.",
+    badge: "Incluse",
   },
   {
     icon: Wrench,
     title: "Garantie biennale",
     description:
-      "Equipements et finitions couverts pendant 2 ans apres reception.",
-    amount: "2 ans",
+      "Couvre pendant 2 ans les equipements dissociables : chauffe-eau, radiateurs, volets, pompes a chaleur, portes, gouttieres.",
+    badge: "2 ans",
   },
   {
-    icon: Layers,
-    title: "Tous corps d'etat",
+    icon: Building,
+    title: "Gros oeuvre et structure",
     description:
-      "Gros oeuvre, second oeuvre et finitions, tous couverts dans un seul contrat.",
-    amount: "Complet",
+      "Fondations, ossature, murs porteurs, charpente, toiture. Tout ce qui touche a la solidite du batiment est couvert.",
+    badge: "Structure",
+  },
+  {
+    icon: FileCheck,
+    title: "Ouvrages indissociables",
+    description:
+      "Canalisations encastrees, planchers, plafonds, chauffage central, huisseries, installation electrique encastree, reseaux d'assainissement.",
+    badge: "Complet",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Sans assurance : les risques",
+    description:
+      "Sanctions penales, interdiction d'exercer, prise en charge financiere des reparations (dizaines de milliers d'euros), perte de credibilite.",
+    badge: "Obligatoire",
   },
 ];
 
@@ -74,16 +74,16 @@ export function Guarantees() {
             className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-4"
             style={{ background: "rgba(212, 175, 55, 0.12)", color: "#D4AF37" }}
           >
-            Protection maximale
+            Loi Spinetta — Articles L.241-1 et suivants
           </span>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Protection complete pour le BTP
+            Ce que couvre la garantie decennale
           </h2>
           <p
-            className="mx-auto mt-4 max-w-xl text-base"
+            className="mx-auto mt-4 max-w-2xl text-base"
             style={{ color: "rgba(255,255,255,0.5)" }}
           >
-            Des garanties adaptees a chaque corps de metier du batiment
+            Tout constructeur est responsable des desordres compromettant la solidite de l&apos;ouvrage ou le rendant impropre a son usage, pendant 10 ans apres reception des travaux.
           </p>
         </motion.div>
 
@@ -106,12 +106,11 @@ export function Guarantees() {
                 backdropFilter: "blur(8px)",
               }}
             >
-              {/* Amount badge */}
               <span
                 className="absolute right-5 top-5 text-xs font-bold"
                 style={{ color: "#D4AF37" }}
               >
-                {g.amount}
+                {g.badge}
               </span>
 
               <div

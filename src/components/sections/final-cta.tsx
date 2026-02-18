@@ -79,10 +79,10 @@ export function FinalCTA() {
           className="mt-14 flex flex-wrap items-center justify-center gap-x-10 gap-y-4"
         >
           {[
-            { value: "5 000+", label: "artisans proteges" },
-            { value: "48h", label: "delai attestation" },
-            { value: "4.8/5", label: "satisfaction client" },
-            { value: "-35%", label: "economies moyennes" },
+            { value: "10 ans", label: "de protection" },
+            { value: "24h", label: "delai de reponse" },
+            { value: "Gratuit", label: "devis sans engagement" },
+            { value: "BTP", label: "tous metiers" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <p className="text-xl font-black" style={{ color: "#D4AF37" }}>
@@ -107,7 +107,7 @@ export function FinalCTA() {
           style={{ color: "rgba(255,255,255,0.25)" }}
         >
           Courtier agree ORIAS N° 25004749 &middot; Gratuit et sans engagement
-          &middot; Reponse sous 48h
+          &middot; Rappel sous 24h
         </motion.p>
       </div>
     </section>
