@@ -66,8 +66,8 @@ export const ArcGalleryHero: React.FC<ArcGalleryHeroProps> = ({
         className="relative mx-auto"
         style={{
           width: "100%",
-          height: dimensions.radius * 0.85,
-          marginTop: 100,
+          height: dimensions.radius * 0.75,
+          marginTop: 140,
         }}
       >
         <div className="absolute left-1/2 bottom-0 -translate-x-1/2">
