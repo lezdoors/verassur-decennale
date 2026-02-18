@@ -1,27 +1,44 @@
-import { Users, Clock, Star, Shield } from "lucide-react";
+"use client";
 
-const stats = [
-  { icon: Users, value: "5 000+", label: "artisans proteges" },
-  { icon: Star, value: "4.8/5", label: "312 avis clients" },
-  { icon: Clock, value: "48h", label: "delai moyen attestation" },
-  { icon: Shield, value: "15M\u20ac", label: "garantie maximale" },
+import { motion } from "motion/react";
+
+const partners = [
+  "AXA",
+  "Allianz",
+  "MAAF",
+  "Generali",
+  "Groupama",
+  "MMA",
+  "Zurich",
+  "SMABTP",
 ];
 
 export function TrustBar() {
   return (
-    <section className="border-y border-slate-100 bg-slate-50/50 py-5">
+    <section className="border-y border-slate-100 bg-white py-8 overflow-hidden">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
-          {stats.map((stat) => (
-            <div key={stat.label} className="flex items-center gap-3">
-              <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-emerald-50">
-                <stat.icon className="h-4 w-4 text-emerald-600" />
-              </div>
-              <div>
-                <p className="text-sm font-bold text-slate-900">{stat.value}</p>
-                <p className="text-xs text-slate-500">{stat.label}</p>
-              </div>
-            </div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="text-center text-xs font-medium uppercase tracking-widest mb-6"
+          style={{ color: "#144D2C", opacity: 0.4 }}
+        >
+          Nos partenaires assureurs
+        </motion.p>
+        <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+          {partners.map((name, i) => (
+            <motion.span
+              key={name}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
+              className="text-lg font-bold tracking-tight"
+              style={{ color: "rgba(20, 77, 44, 0.18)" }}
+            >
+              {name}
+            </motion.span>
           ))}
         </div>
       </div>

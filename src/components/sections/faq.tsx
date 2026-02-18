@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import {
   Accordion,
   AccordionContent,
@@ -42,29 +45,65 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="bg-slate-50 py-16 sm:py-24">
+    <section id="faq" className="py-20 sm:py-28" style={{ background: "#F7FAF8" }}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <span
+            className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-4"
+            style={{ background: "rgba(20, 77, 44, 0.06)", color: "#144D2C" }}
+          >
+            FAQ
+          </span>
+          <h2
+            className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#03260E" }}
+          >
             Questions frequentes
           </h2>
-          <p className="mt-3 text-base text-slate-500">
+          <p
+            className="mt-4 text-base"
+            style={{ color: "#144D2C", opacity: 0.6 }}
+          >
             Tout ce que vous devez savoir sur l&apos;assurance decennale
           </p>
-        </div>
+        </motion.div>
 
-        <Accordion type="single" collapsible className="mt-10">
-          {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="border-b border-slate-200">
-              <AccordionTrigger className="py-4 text-left text-sm font-semibold text-slate-900 hover:no-underline">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="pb-4 text-sm leading-relaxed text-slate-500">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+        >
+          <Accordion type="single" collapsible className="mt-12">
+            {faqs.map((faq, i) => (
+              <AccordionItem
+                key={i}
+                value={`faq-${i}`}
+                className="border-b"
+                style={{ borderColor: "rgba(20, 77, 44, 0.08)" }}
+              >
+                <AccordionTrigger
+                  className="py-5 text-left text-sm font-bold hover:no-underline"
+                  style={{ color: "#03260E" }}
+                >
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent
+                  className="pb-5 text-sm leading-relaxed"
+                  style={{ color: "#144D2C", opacity: 0.6 }}
+                >
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </motion.div>
       </div>
     </section>
   );
