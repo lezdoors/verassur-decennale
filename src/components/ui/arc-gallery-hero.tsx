@@ -63,11 +63,11 @@ export const ArcGalleryHero: React.FC<ArcGalleryHeroProps> = ({
     >
       {/* Arc gallery */}
       <div
-        className="relative mx-auto"
+        className="relative mx-auto overflow-hidden"
         style={{
           width: "100%",
-          height: dimensions.radius * 0.75,
-          marginTop: 140,
+          height: dimensions.radius * 0.7,
+          marginTop: 80,
         }}
       >
         <div className="absolute left-1/2 bottom-0 -translate-x-1/2">
