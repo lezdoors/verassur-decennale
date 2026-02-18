@@ -47,7 +47,7 @@ export function Header() {
             06 44 65 70 05
           </a>
           <Button asChild size="sm" className="rounded-full bg-emerald-700 px-5 hover:bg-emerald-600">
-            <a href="#devis">Devis gratuit</a>
+            <a href="/devis">Devis gratuit</a>
           </Button>
         </div>
 
@@ -78,7 +78,7 @@ export function Header() {
               06 44 65 70 05
             </a>
             <Button asChild size="sm" className="w-full rounded-full bg-emerald-700 hover:bg-emerald-600">
-              <a href="#devis">Devis gratuit</a>
+              <a href="/devis">Devis gratuit</a>
             </Button>
           </nav>
         </div>

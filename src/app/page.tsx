@@ -6,7 +6,6 @@ import { Metiers } from "@/components/sections/metiers";
 import { WhyUs } from "@/components/sections/why-us";
 import { Testimonials } from "@/components/sections/testimonials";
 import { FAQ } from "@/components/sections/faq";
-import { ContactForm } from "@/components/sections/contact-form";
 import { FinalCTA } from "@/components/sections/final-cta";
 
 export default function Home() {
@@ -19,7 +18,6 @@ export default function Home() {
       <Metiers />
       <WhyUs />
       <Testimonials />
-      <ContactForm />
       <FAQ />
       <FinalCTA />
     </>

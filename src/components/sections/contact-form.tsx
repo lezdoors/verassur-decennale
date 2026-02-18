@@ -75,7 +75,7 @@ export function ContactForm() {
         : form.prenom && form.telephone;
 
   return (
-    <section id="devis" className="py-20 sm:py-28" style={{ background: "#F7FAF8" }}>
+    <section id="devis" className="min-h-screen py-20 pt-28 sm:py-28 sm:pt-32" style={{ background: "#F7FAF8" }}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

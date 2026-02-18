@@ -89,7 +89,7 @@ export function HeroSection() {
         {/* CTAs */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="#devis"
+            href="/devis"
             className="flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition-all hover:scale-105"
             style={{
               background: "#D4AF37",
