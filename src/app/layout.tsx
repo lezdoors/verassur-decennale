@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { StickyFooter } from "@/components/ui/sticky-footer";
+import { HoverFooterSection } from "@/components/sections/hover-footer-section";
 import { PhoneFloatingBadge } from "@/components/phone-floating-badge";
 
 const inter = Inter({
@@ -32,7 +32,7 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${inter.variable} font-sans antialiased`}>
         <main>{children}</main>
-        <StickyFooter />
+        <HoverFooterSection />
         <PhoneFloatingBadge />
       </body>
     </html>
