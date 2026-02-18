@@ -19,14 +19,14 @@ export function HeroSection() {
   return (
     <ArcGalleryHero
       images={btpImages}
-      startAngle={15}
-      endAngle={165}
-      radiusLg={500}
-      radiusMd={380}
-      radiusSm={280}
-      cardSizeLg={130}
-      cardSizeMd={105}
-      cardSizeSm={75}
+      startAngle={10}
+      endAngle={170}
+      radiusLg={580}
+      radiusMd={420}
+      radiusSm={300}
+      cardSizeLg={120}
+      cardSizeMd={95}
+      cardSizeSm={70}
     >
       {/* Header bar - positioned absolutely at top */}
       <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-6 bg-white/80 backdrop-blur-md border-b border-gray-100">
