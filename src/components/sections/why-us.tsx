@@ -44,7 +44,7 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section className="py-20 sm:py-28" style={{ background: "#1A1A1A" }}>
+    <section className="py-20 sm:py-28" style={{ background: "#F8FAFC" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,12 +59,15 @@ export function WhyUs() {
           >
             Nos engagements
           </span>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Pourquoi choisir Verassur ?
+          <h2
+            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#111827" }}
+          >
+            Pourquoi choisir AssureNao ?
           </h2>
           <p
             className="mx-auto mt-4 max-w-xl text-base"
-            style={{ color: "rgba(255,255,255,0.5)" }}
+            style={{ color: "#6B7280" }}
           >
             Des avantages concrets pour les professionnels du batiment
           </p>
@@ -81,9 +84,9 @@ export function WhyUs() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="group relative overflow-hidden p-7 transition-all"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                backdropFilter: "blur(8px)",
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
               }}
             >
               {/* Stat in top right */}
@@ -96,7 +99,7 @@ export function WhyUs() {
                 </p>
                 <p
                   className="text-[10px] font-medium uppercase tracking-wider"
-                  style={{ color: "rgba(255,255,255,0.3)" }}
+                  style={{ color: "#9CA3AF" }}
                 >
                   {r.statLabel}
                 </p>
@@ -119,12 +122,15 @@ export function WhyUs() {
                 {r.highlight}
               </div>
 
-              <h3 className="text-lg font-medium text-white">
+              <h3
+                className="text-lg font-medium"
+                style={{ color: "#111827" }}
+              >
                 {r.title}
               </h3>
               <p
                 className="mt-2 text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.5)" }}
+                style={{ color: "#6B7280" }}
               >
                 {r.description}
               </p>

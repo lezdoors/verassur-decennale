@@ -1,88 +1,60 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import { Phone, Menu, X, Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Phone, Shield } from "lucide-react";
 
 export function Header() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white/80 backdrop-blur-lg">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Shield className="h-7 w-7 text-primary" />
-          <div className="flex flex-col">
-            <span className="text-lg font-bold leading-tight tracking-tight text-foreground">
-              Verassur
-            </span>
-            <span className="text-[10px] font-medium leading-none text-muted-foreground">
-              Assurance Decennale
-            </span>
-          </div>
+          <Shield className="h-6 w-6" style={{ color: "#D4AF37" }} />
+          <span className="text-xl font-bold" style={{ color: "#111827" }}>
+            AssureNao
+          </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden items-center gap-8 md:flex">
-          <a href="#garanties" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+        <nav className="hidden md:flex items-center gap-8">
+          <Link
+            href="/#garanties"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+          >
             Garanties
-          </a>
-          <a href="#metiers" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+          </Link>
+          <Link
+            href="/#metiers"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+          >
             Metiers
-          </a>
-          <a href="#faq" className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+          </Link>
+          <Link
+            href="/#faq"
+            className="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900"
+          >
             FAQ
-          </a>
+          </Link>
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 md:flex">
+        {/* Right: phone + CTA */}
+        <div className="flex items-center gap-4">
           <a
             href="tel:0644657005"
-            className="flex items-center gap-2 text-sm font-semibold text-foreground transition-colors hover:text-primary"
+            className="hidden md:flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
           >
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4" style={{ color: "#D4AF37" }} />
             06 44 65 70 05
           </a>
-          <Button asChild size="sm" className="rounded-full bg-emerald-700 px-5 hover:bg-emerald-600">
-            <a href="/devis">Devis gratuit</a>
-          </Button>
+          <Link
+            href="/devis"
+            className="px-5 py-2.5 text-sm font-semibold transition-all hover:opacity-90"
+            style={{ background: "#D4AF37", color: "#111827" }}
+          >
+            Devis gratuit
+          </Link>
         </div>
-
-        {/* Mobile toggle */}
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:text-foreground md:hidden"
-        >
-          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
       </div>
-
-      {/* Mobile menu */}
-      {mobileOpen && (
-        <div className="border-t border-border bg-white px-4 pb-4 pt-2 md:hidden">
-          <nav className="flex flex-col gap-3">
-            <a href="#garanties" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-muted-foreground">
-              Garanties
-            </a>
-            <a href="#metiers" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-muted-foreground">
-              Metiers
-            </a>
-            <a href="#faq" onClick={() => setMobileOpen(false)} className="text-sm font-medium text-muted-foreground">
-              FAQ
-            </a>
-            <a href="tel:0644657005" className="flex items-center gap-2 text-sm font-semibold text-primary">
-              <Phone className="h-4 w-4" />
-              06 44 65 70 05
-            </a>
-            <Button asChild size="sm" className="w-full rounded-full bg-emerald-700 hover:bg-emerald-600">
-              <a href="/devis">Devis gratuit</a>
-            </Button>
-          </nav>
-        </div>
-      )}
     </header>
   );
 }

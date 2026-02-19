@@ -53,7 +53,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-20 sm:py-28" style={{ background: "#111111" }}>
+    <section id="faq" className="py-20 sm:py-28" style={{ background: "#F8FAFC" }}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,12 +68,15 @@ export function FAQ() {
           >
             FAQ
           </span>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2
+            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#111827" }}
+          >
             Questions frequentes
           </h2>
           <p
             className="mt-4 text-base"
-            style={{ color: "rgba(255,255,255,0.5)" }}
+            style={{ color: "#6B7280" }}
           >
             Tout savoir sur la garantie decennale, la loi Spinetta et vos obligations
           </p>
@@ -91,16 +94,17 @@ export function FAQ() {
                 key={i}
                 value={`faq-${i}`}
                 className="border-b"
-                style={{ borderColor: "rgba(255,255,255,0.08)" }}
+                style={{ borderColor: "#E5E7EB" }}
               >
                 <AccordionTrigger
-                  className="py-5 text-left text-sm font-medium text-white hover:no-underline"
+                  className="py-5 text-left text-sm font-medium hover:no-underline"
+                  style={{ color: "#111827" }}
                 >
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent
                   className="pb-5 text-sm leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.5)" }}
+                  style={{ color: "#6B7280" }}
                 >
                   {faq.a}
                 </AccordionContent>

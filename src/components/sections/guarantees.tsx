@@ -60,7 +60,7 @@ export function Guarantees() {
     <section
       id="garanties"
       className="py-20 sm:py-28"
-      style={{ background: "#0A0A0A" }}
+      style={{ background: "#F8FAFC" }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
@@ -76,12 +76,15 @@ export function Guarantees() {
           >
             Loi Spinetta — Articles L.241-1 et suivants
           </span>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2
+            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#111827" }}
+          >
             Ce que couvre la garantie decennale
           </h2>
           <p
             className="mx-auto mt-4 max-w-2xl text-base"
-            style={{ color: "rgba(255,255,255,0.5)" }}
+            style={{ color: "#6B7280" }}
           >
             Tout constructeur est responsable des desordres compromettant la solidite de l&apos;ouvrage ou le rendant impropre a son usage, pendant 10 ans apres reception des travaux.
           </p>
@@ -101,9 +104,9 @@ export function Guarantees() {
               }}
               className="group relative p-6 transition-all cursor-default"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                backdropFilter: "blur(8px)",
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
               }}
             >
               <span
@@ -120,10 +123,10 @@ export function Guarantees() {
                 <g.icon className="h-5 w-5" style={{ color: "#D4AF37" }} />
               </div>
 
-              <h3 className="text-base font-medium text-white">{g.title}</h3>
+              <h3 className="text-base font-medium" style={{ color: "#111827" }}>{g.title}</h3>
               <p
                 className="mt-2 text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.45)" }}
+                style={{ color: "#6B7280" }}
               >
                 {g.description}
               </p>

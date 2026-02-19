@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Phone, Shield } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Marquee } from "@/components/ui/marquee";
 
@@ -41,7 +41,7 @@ function StatsMarquee() {
 
 export function HeroSection() {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-start justify-end">
+    <section className="relative flex min-h-screen w-full flex-col items-start justify-end pt-16">
       {/* Background image */}
       <div
         className="absolute inset-0 bg-center bg-cover"
@@ -51,43 +51,6 @@ export function HeroSection() {
         }}
       >
         <div className="absolute inset-0 bg-black/50" />
-      </div>
-
-      {/* Header bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 lg:px-16 py-4 bg-black/20 backdrop-blur-md border-b border-white/10">
-        <div className="flex items-center gap-2">
-          <Shield className="h-6 w-6" style={{ color: "#D4AF37" }} />
-          <span className="text-xl font-bold text-white">
-            Verassur
-          </span>
-        </div>
-        <nav className="hidden lg:flex items-center gap-8">
-          {["Garanties", "Metiers", "FAQ"].map((item) => (
-            <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-        <div className="flex items-center gap-3">
-          <a
-            href="tel:0644657005"
-            className="hidden sm:flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
-          >
-            <Phone className="h-3.5 w-3.5" style={{ color: "#D4AF37" }} />
-            06 44 65 70 05
-          </a>
-          <a
-            href="/devis"
-            className="rounded-none px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105"
-            style={{ background: "#D4AF37", color: "#03260E" }}
-          >
-            Devis gratuit
-          </a>
-        </div>
       </div>
 
       {/* Stats marquee */}

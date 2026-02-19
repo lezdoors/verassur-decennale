@@ -89,7 +89,7 @@ const metiers = [
 
 export function Metiers() {
   return (
-    <section id="metiers" className="py-20 sm:py-28" style={{ background: "#111111" }}>
+    <section id="metiers" className="py-20 sm:py-28" style={{ background: "#FFFFFF" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -104,12 +104,15 @@ export function Metiers() {
           >
             Tous les corps de metier
           </span>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2
+            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#111827" }}
+          >
             Votre metier, votre couverture
           </h2>
           <p
             className="mx-auto mt-4 max-w-2xl text-base"
-            style={{ color: "rgba(255,255,255,0.5)" }}
+            style={{ color: "#6B7280" }}
           >
             Chaque metier du batiment a des risques specifiques. Voici ce que la decennale couvre selon votre activite.
           </p>
@@ -129,8 +132,9 @@ export function Metiers() {
               }}
               className="group flex gap-4 p-5 cursor-default transition-all"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
               }}
             >
               <div
@@ -144,14 +148,14 @@ export function Metiers() {
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium text-white">
+                  <span className="text-sm font-medium" style={{ color: "#111827" }}>
                     {m.name}
                   </span>
                   <span
                     className="text-[10px] font-medium uppercase tracking-wider px-2 py-0.5"
                     style={{
-                      background: m.obligatoire ? "rgba(212, 175, 55, 0.1)" : "rgba(255,255,255,0.06)",
-                      color: m.obligatoire ? "#D4AF37" : "rgba(255,255,255,0.4)",
+                      background: m.obligatoire ? "rgba(212, 175, 55, 0.1)" : "#F1F5F9",
+                      color: m.obligatoire ? "#D4AF37" : "#6B7280",
                     }}
                   >
                     {m.obligatoire ? "Obligatoire" : "Conditionnel"}
@@ -159,13 +163,13 @@ export function Metiers() {
                 </div>
                 <p
                   className="text-[11px] font-medium mt-0.5 uppercase tracking-wider"
-                  style={{ color: "rgba(255,255,255,0.3)" }}
+                  style={{ color: "#9CA3AF" }}
                 >
                   {m.type}
                 </p>
                 <p
                   className="text-xs mt-1.5 leading-relaxed"
-                  style={{ color: "rgba(255,255,255,0.45)" }}
+                  style={{ color: "#6B7280" }}
                 >
                   {m.exemple}
                 </p>

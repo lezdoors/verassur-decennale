@@ -15,9 +15,9 @@ export function TrustBar() {
     <section
       className="py-5 overflow-hidden"
       style={{
-        background: "#111111",
-        borderTop: "1px solid rgba(255,255,255,0.06)",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
+        background: "#F8FAFC",
+        borderTop: "1px solid #E5E7EB",
+        borderBottom: "1px solid #E5E7EB",
       }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -37,7 +37,7 @@ export function TrustBar() {
               />
               <span
                 className="text-xs font-medium uppercase tracking-wider"
-                style={{ color: "rgba(255,255,255,0.5)" }}
+                style={{ color: "#6B7280" }}
               >
                 {item.text}
               </span>

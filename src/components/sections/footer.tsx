@@ -20,7 +20,7 @@ export function Footer() {
     <footer
       className="w-full"
       style={{
-        background: "#0A0A0A",
+        background: "#111827",
         borderTop: "1px solid rgba(255,255,255,0.06)",
       }}
     >
@@ -43,7 +43,7 @@ export function Footer() {
               <Shield className="h-5 w-5" style={{ color: "#D4AF37" }} />
             </motion.div>
             <span className="font-medium text-xl text-white">
-              Verassur
+              AssureNao
             </span>
           </Link>
           <p className="text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>
@@ -55,7 +55,7 @@ export function Footer() {
             <a
               href="tel:0644657005"
               className="inline-flex items-center gap-2 rounded-sm px-4 py-2 text-sm font-medium transition-all hover:scale-105"
-              style={{ background: "#D4AF37", color: "#0A0A0A" }}
+              style={{ background: "#D4AF37", color: "#111827" }}
             >
               <Phone className="h-3.5 w-3.5" />
               06 44 65 70 05
@@ -125,9 +125,9 @@ export function Footer() {
                 <Phone className="h-4 w-4" style={{ color: "#D4AF37" }} />
                 06 44 65 70 05
               </a>
-              <a href="mailto:contact@verassur.fr" className="flex items-center gap-2 transition-colors hover:text-white" style={{ color: "rgba(255,255,255,0.45)" }}>
+              <a href="mailto:contact@assurenao.fr" className="flex items-center gap-2 transition-colors hover:text-white" style={{ color: "rgba(255,255,255,0.45)" }}>
                 <Mail className="h-4 w-4" style={{ color: "#D4AF37" }} />
-                contact@verassur.fr
+                contact@assurenao.fr
               </a>
               <span className="flex items-center gap-2" style={{ color: "rgba(255,255,255,0.45)" }}>
                 <MapPin className="h-4 w-4 shrink-0" style={{ color: "#D4AF37" }} />
@@ -177,7 +177,7 @@ export function Footer() {
             <Button
               type="submit"
               className="rounded-sm font-medium"
-              style={{ background: "#D4AF37", color: "#0A0A0A" }}
+              style={{ background: "#D4AF37", color: "#111827" }}
             >
               OK
             </Button>
@@ -189,7 +189,7 @@ export function Footer() {
       <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-between gap-4 py-6 px-6 md:h-16 md:flex-row md:py-0">
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
-            &copy; {new Date().getFullYear()} Verassur. Tous droits reserves.
+            &copy; {new Date().getFullYear()} AssureNao. Tous droits reserves.
           </p>
           <p className="text-xs" style={{ color: "rgba(255,255,255,0.3)" }}>
             Courtier agree ORIAS N° 25004749 &middot; 66 Av. des Champs-Elysees, 75008 Paris

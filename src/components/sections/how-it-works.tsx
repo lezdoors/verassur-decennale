@@ -32,7 +32,7 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="py-20 sm:py-28" style={{ background: "#1A1A1A" }}>
+    <section className="py-20 sm:py-28" style={{ background: "#FFFFFF" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,12 +47,15 @@ export function HowItWorks() {
           >
             Simple et rapide
           </span>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2
+            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#111827" }}
+          >
             Comment ca marche ?
           </h2>
           <p
             className="mx-auto mt-4 max-w-xl text-base"
-            style={{ color: "rgba(255,255,255,0.5)" }}
+            style={{ color: "#6B7280" }}
           >
             Obtenez votre assurance decennale en 3 etapes simples
           </p>
@@ -69,15 +72,15 @@ export function HowItWorks() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="group relative p-8 transition-all"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                backdropFilter: "blur(8px)",
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
               }}
             >
               {/* Time badge */}
               <div
                 className="absolute -top-3 right-6 px-3.5 py-1 text-xs font-medium uppercase tracking-wider"
-                style={{ background: "#D4AF37", color: "#0A0A0A" }}
+                style={{ background: "#D4AF37", color: "#FFFFFF" }}
               >
                 {step.time}
               </div>
@@ -85,7 +88,7 @@ export function HowItWorks() {
               <div className="mb-5 flex items-center gap-4">
                 <span
                   className="text-5xl font-medium"
-                  style={{ color: "rgba(255,255,255,0.06)" }}
+                  style={{ color: "#E5E7EB" }}
                 >
                   {step.number}
                 </span>
@@ -97,19 +100,22 @@ export function HowItWorks() {
                 </div>
               </div>
 
-              <h3 className="text-lg font-medium text-white">
+              <h3
+                className="text-lg font-medium"
+                style={{ color: "#111827" }}
+              >
                 {step.title}
               </h3>
               <p
                 className="mt-2 text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.5)" }}
+                style={{ color: "#6B7280" }}
               >
                 {step.description}
               </p>
 
               {/* Connector dots */}
               {i < steps.length - 1 && (
-                <div className="absolute -right-4 top-1/2 hidden md:block" style={{ color: "rgba(255,255,255,0.15)" }}>
+                <div className="absolute -right-4 top-1/2 hidden md:block" style={{ color: "#D1D5DB" }}>
                   <svg width="8" height="8" viewBox="0 0 8 8">
                     <circle cx="4" cy="4" r="3" fill="currentColor" />
                   </svg>

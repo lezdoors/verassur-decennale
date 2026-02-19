@@ -9,7 +9,7 @@ const testimonials = [
     role: "Macon depuis 15 ans",
     city: "Lyon",
     rating: 5,
-    text: "Apres plusieurs comparatifs infructueux, je me suis tourne vers Verassur qui a fait le boulot avec rapidite et efficacite. Attestation recue en 2 jours.",
+    text: "Apres plusieurs comparatifs infructueux, je me suis tourne vers AssureNao qui a fait le boulot avec rapidite et efficacite. Attestation recue en 2 jours.",
     tag: "Decennale",
   },
   {
@@ -17,7 +17,7 @@ const testimonials = [
     role: "Electricienne auto-entrepreneur",
     city: "Marseille",
     rating: 5,
-    text: "Resiliee par mon ancien assureur suite a un sinistre, Verassur a pris le temps d'etudier mon dossier et m'a trouve une solution adaptee en moins de 48h.",
+    text: "Resiliee par mon ancien assureur suite a un sinistre, AssureNao a pris le temps d'etudier mon dossier et m'a trouve une solution adaptee en moins de 48h.",
     tag: "Resiliee",
   },
   {
@@ -33,14 +33,14 @@ const testimonials = [
     role: "Plombiere-chauffagiste",
     city: "Bordeaux",
     rating: 5,
-    text: "Apres 3 refus d'assureurs classiques a cause de mon malus, Verassur m'a trouvee une couverture complete en 48h. Service impeccable et tarif correct.",
+    text: "Apres 3 refus d'assureurs classiques a cause de mon malus, AssureNao m'a trouvee une couverture complete en 48h. Service impeccable et tarif correct.",
     tag: "Malussee",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-20 sm:py-28" style={{ background: "#0A0A0A" }}>
+    <section className="py-20 sm:py-28" style={{ background: "#FFFFFF" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -55,12 +55,15 @@ export function Testimonials() {
           >
             Avis clients
           </span>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2
+            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
+            style={{ color: "#111827" }}
+          >
             Ils nous font confiance
           </h2>
           <p
             className="mt-4 text-base"
-            style={{ color: "rgba(255,255,255,0.5)" }}
+            style={{ color: "#6B7280" }}
           >
             Ce que nos clients disent de nous
           </p>
@@ -87,9 +90,9 @@ export function Testimonials() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="group relative p-7 transition-all"
               style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
-                backdropFilter: "blur(8px)",
+                background: "#FFFFFF",
+                border: "1px solid #E5E7EB",
+                boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
               }}
             >
               {/* Tag */}
@@ -106,7 +109,7 @@ export function Testimonials() {
               {/* Quote icon */}
               <Quote
                 className="mb-4 h-6 w-6"
-                style={{ color: "rgba(255,255,255,0.08)" }}
+                style={{ color: "#E5E7EB" }}
               />
 
               {/* Stars */}
@@ -123,7 +126,7 @@ export function Testimonials() {
               {/* Quote */}
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "rgba(255,255,255,0.6)" }}
+                style={{ color: "#374151" }}
               >
                 &ldquo;{t.text}&rdquo;
               </p>
@@ -137,12 +140,12 @@ export function Testimonials() {
                   {t.name[0]}
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-white">
+                  <p className="text-sm font-medium" style={{ color: "#111827" }}>
                     {t.name}
                   </p>
                   <p
                     className="text-xs"
-                    style={{ color: "rgba(255,255,255,0.4)" }}
+                    style={{ color: "#6B7280" }}
                   >
                     {t.role} &middot; {t.city}
                   </p>

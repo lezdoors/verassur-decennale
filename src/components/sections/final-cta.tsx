@@ -5,7 +5,7 @@ import { ArrowRight, Phone, Shield } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section id="devis" className="relative overflow-hidden py-20 sm:py-28" style={{ background: "#0A0A0A" }}>
+    <section id="devis" className="relative overflow-hidden py-20 sm:py-28" style={{ background: "#111827" }}>
       {/* Decorative gradient */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -50,7 +50,7 @@ export function FinalCTA() {
             className="inline-flex items-center gap-2 rounded-sm px-8 py-4 text-base font-medium transition-all hover:scale-105"
             style={{
               background: "#D4AF37",
-              color: "#0A0A0A",
+              color: "#111827",
               boxShadow: "0 0 40px rgba(212, 175, 55, 0.3)",
             }}
           >
