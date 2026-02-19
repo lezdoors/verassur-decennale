@@ -60,7 +60,7 @@ export function Guarantees() {
     <section
       id="garanties"
       className="py-20 sm:py-28"
-      style={{ background: "#03260E" }}
+      style={{ background: "#0A0A0A" }}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
@@ -71,12 +71,12 @@ export function Guarantees() {
           className="text-center"
         >
           <span
-            className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-4"
-            style={{ background: "rgba(212, 175, 55, 0.12)", color: "#D4AF37" }}
+            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
+            style={{ color: "#D4AF37" }}
           >
             Loi Spinetta — Articles L.241-1 et suivants
           </span>
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
             Ce que couvre la garantie decennale
           </h2>
           <p
@@ -99,28 +99,28 @@ export function Guarantees() {
                 y: -4,
                 transition: { duration: 0.2 },
               }}
-              className="group relative rounded-3xl p-6 transition-all cursor-default"
+              className="group relative p-6 transition-all cursor-default"
               style={{
-                background: "rgba(255,255,255,0.04)",
+                background: "rgba(255,255,255,0.03)",
                 border: "1px solid rgba(255,255,255,0.08)",
                 backdropFilter: "blur(8px)",
               }}
             >
               <span
-                className="absolute right-5 top-5 text-xs font-bold"
+                className="absolute right-5 top-5 text-xs font-medium uppercase tracking-wider"
                 style={{ color: "#D4AF37" }}
               >
                 {g.badge}
               </span>
 
               <div
-                className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl transition-colors"
+                className="mb-4 flex h-12 w-12 items-center justify-center rounded-sm transition-colors"
                 style={{ background: "rgba(212, 175, 55, 0.1)" }}
               >
                 <g.icon className="h-5 w-5" style={{ color: "#D4AF37" }} />
               </div>
 
-              <h3 className="text-base font-bold text-white">{g.title}</h3>
+              <h3 className="text-base font-medium text-white">{g.title}</h3>
               <p
                 className="mt-2 text-sm leading-relaxed"
                 style={{ color: "rgba(255,255,255,0.45)" }}

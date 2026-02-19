@@ -53,7 +53,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-20 sm:py-28" style={{ background: "#F7FAF8" }}>
+    <section id="faq" className="py-20 sm:py-28" style={{ background: "#111111" }}>
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -63,20 +63,17 @@ export function FAQ() {
           className="text-center"
         >
           <span
-            className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-4"
-            style={{ background: "rgba(20, 77, 44, 0.06)", color: "#144D2C" }}
+            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
+            style={{ color: "#D4AF37" }}
           >
             FAQ
           </span>
-          <h2
-            className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-            style={{ color: "#03260E" }}
-          >
+          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
             Questions frequentes
           </h2>
           <p
             className="mt-4 text-base"
-            style={{ color: "#144D2C", opacity: 0.6 }}
+            style={{ color: "rgba(255,255,255,0.5)" }}
           >
             Tout savoir sur la garantie decennale, la loi Spinetta et vos obligations
           </p>
@@ -94,17 +91,16 @@ export function FAQ() {
                 key={i}
                 value={`faq-${i}`}
                 className="border-b"
-                style={{ borderColor: "rgba(20, 77, 44, 0.08)" }}
+                style={{ borderColor: "rgba(255,255,255,0.08)" }}
               >
                 <AccordionTrigger
-                  className="py-5 text-left text-sm font-bold hover:no-underline"
-                  style={{ color: "#03260E" }}
+                  className="py-5 text-left text-sm font-medium text-white hover:no-underline"
                 >
                   {faq.q}
                 </AccordionTrigger>
                 <AccordionContent
                   className="pb-5 text-sm leading-relaxed"
-                  style={{ color: "#144D2C", opacity: 0.6 }}
+                  style={{ color: "rgba(255,255,255,0.5)" }}
                 >
                   {faq.a}
                 </AccordionContent>

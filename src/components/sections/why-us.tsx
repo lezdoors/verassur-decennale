@@ -44,7 +44,7 @@ const reasons = [
 
 export function WhyUs() {
   return (
-    <section className="py-20 sm:py-28" style={{ background: "#F7FAF8" }}>
+    <section className="py-20 sm:py-28" style={{ background: "#1A1A1A" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,20 +54,17 @@ export function WhyUs() {
           className="text-center"
         >
           <span
-            className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-4"
-            style={{ background: "rgba(20, 77, 44, 0.06)", color: "#144D2C" }}
+            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
+            style={{ color: "#D4AF37" }}
           >
             Nos engagements
           </span>
-          <h2
-            className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-            style={{ color: "#03260E" }}
-          >
+          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
             Pourquoi choisir Verassur ?
           </h2>
           <p
             className="mx-auto mt-4 max-w-xl text-base"
-            style={{ color: "#144D2C", opacity: 0.6 }}
+            style={{ color: "rgba(255,255,255,0.5)" }}
           >
             Des avantages concrets pour les professionnels du batiment
           </p>
@@ -82,34 +79,38 @@ export function WhyUs() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative overflow-hidden rounded-3xl bg-white p-7 shadow-sm transition-shadow hover:shadow-xl"
-              style={{ border: "1px solid rgba(20, 77, 44, 0.06)" }}
+              className="group relative overflow-hidden p-7 transition-all"
+              style={{
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                backdropFilter: "blur(8px)",
+              }}
             >
               {/* Stat in top right */}
               <div className="absolute right-6 top-6 text-right">
                 <p
-                  className="text-2xl font-black"
+                  className="text-2xl font-medium"
                   style={{ color: "#D4AF37" }}
                 >
                   {r.stat}
                 </p>
                 <p
-                  className="text-[10px] font-medium"
-                  style={{ color: "#144D2C", opacity: 0.4 }}
+                  className="text-[10px] font-medium uppercase tracking-wider"
+                  style={{ color: "rgba(255,255,255,0.3)" }}
                 >
                   {r.statLabel}
                 </p>
               </div>
 
               <div
-                className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl"
-                style={{ background: "rgba(20, 77, 44, 0.06)" }}
+                className="mb-4 flex h-12 w-12 items-center justify-center rounded-sm"
+                style={{ background: "rgba(212, 175, 55, 0.1)" }}
               >
-                <r.icon className="h-5 w-5" style={{ color: "#144D2C" }} />
+                <r.icon className="h-5 w-5" style={{ color: "#D4AF37" }} />
               </div>
 
               <div
-                className="mb-2 inline-block rounded-full px-2.5 py-0.5 text-[11px] font-bold"
+                className="mb-2 inline-block px-2.5 py-0.5 text-[11px] font-medium uppercase tracking-wider"
                 style={{
                   background: "rgba(212, 175, 55, 0.1)",
                   color: "#D4AF37",
@@ -118,15 +119,12 @@ export function WhyUs() {
                 {r.highlight}
               </div>
 
-              <h3
-                className="text-lg font-bold"
-                style={{ color: "#03260E" }}
-              >
+              <h3 className="text-lg font-medium text-white">
                 {r.title}
               </h3>
               <p
                 className="mt-2 text-sm leading-relaxed"
-                style={{ color: "#144D2C", opacity: 0.6 }}
+                style={{ color: "rgba(255,255,255,0.5)" }}
               >
                 {r.description}
               </p>

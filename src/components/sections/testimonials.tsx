@@ -40,7 +40,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="bg-white py-20 sm:py-28">
+    <section className="py-20 sm:py-28" style={{ background: "#0A0A0A" }}>
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,20 +50,17 @@ export function Testimonials() {
           className="text-center"
         >
           <span
-            className="inline-block rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-wider mb-4"
-            style={{ background: "rgba(20, 77, 44, 0.06)", color: "#144D2C" }}
+            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
+            style={{ color: "#D4AF37" }}
           >
             Avis clients
           </span>
-          <h2
-            className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-            style={{ color: "#03260E" }}
-          >
+          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
             Ils nous font confiance
           </h2>
           <p
             className="mt-4 text-base"
-            style={{ color: "#144D2C", opacity: 0.6 }}
+            style={{ color: "rgba(255,255,255,0.5)" }}
           >
             Ce que nos clients disent de nous
           </p>
@@ -72,7 +69,8 @@ export function Testimonials() {
             {[1, 2, 3, 4, 5].map((s) => (
               <Star
                 key={s}
-                className="h-5 w-5 fill-amber-400 text-amber-400"
+                className="h-5 w-5"
+                style={{ fill: "#D4AF37", color: "#D4AF37" }}
               />
             ))}
           </div>
@@ -87,12 +85,16 @@ export function Testimonials() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative rounded-3xl bg-white p-7 transition-shadow hover:shadow-xl"
-              style={{ border: "1px solid rgba(20, 77, 44, 0.08)" }}
+              className="group relative p-7 transition-all"
+              style={{
+                background: "rgba(255,255,255,0.03)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                backdropFilter: "blur(8px)",
+              }}
             >
               {/* Tag */}
               <span
-                className="absolute right-5 top-5 rounded-full px-3 py-1 text-[11px] font-bold"
+                className="absolute right-5 top-5 px-3 py-1 text-[11px] font-medium uppercase tracking-wider"
                 style={{
                   background: "rgba(212, 175, 55, 0.1)",
                   color: "#D4AF37",
@@ -104,7 +106,7 @@ export function Testimonials() {
               {/* Quote icon */}
               <Quote
                 className="mb-4 h-6 w-6"
-                style={{ color: "rgba(20, 77, 44, 0.08)" }}
+                style={{ color: "rgba(255,255,255,0.08)" }}
               />
 
               {/* Stars */}
@@ -112,7 +114,8 @@ export function Testimonials() {
                 {Array.from({ length: t.rating }).map((_, si) => (
                   <Star
                     key={si}
-                    className="h-3.5 w-3.5 fill-amber-400 text-amber-400"
+                    className="h-3.5 w-3.5"
+                    style={{ fill: "#D4AF37", color: "#D4AF37" }}
                   />
                 ))}
               </div>
@@ -120,7 +123,7 @@ export function Testimonials() {
               {/* Quote */}
               <p
                 className="text-sm leading-relaxed"
-                style={{ color: "#144D2C", opacity: 0.7 }}
+                style={{ color: "rgba(255,255,255,0.6)" }}
               >
                 &ldquo;{t.text}&rdquo;
               </p>
@@ -128,21 +131,18 @@ export function Testimonials() {
               {/* Author */}
               <div className="mt-6 flex items-center gap-3">
                 <div
-                  className="flex h-10 w-10 items-center justify-center rounded-full text-sm font-bold text-white"
-                  style={{ background: "#144D2C" }}
+                  className="flex h-10 w-10 items-center justify-center text-sm font-medium"
+                  style={{ background: "rgba(212, 175, 55, 0.15)", color: "#D4AF37" }}
                 >
                   {t.name[0]}
                 </div>
                 <div>
-                  <p
-                    className="text-sm font-bold"
-                    style={{ color: "#03260E" }}
-                  >
+                  <p className="text-sm font-medium text-white">
                     {t.name}
                   </p>
                   <p
                     className="text-xs"
-                    style={{ color: "#144D2C", opacity: 0.5 }}
+                    style={{ color: "rgba(255,255,255,0.4)" }}
                   >
                     {t.role} &middot; {t.city}
                   </p>

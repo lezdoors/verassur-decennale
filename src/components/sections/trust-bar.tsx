@@ -12,7 +12,14 @@ const indicators = [
 
 export function TrustBar() {
   return (
-    <section className="border-y border-slate-100 bg-white py-6 overflow-hidden">
+    <section
+      className="py-5 overflow-hidden"
+      style={{
+        background: "#111111",
+        borderTop: "1px solid rgba(255,255,255,0.06)",
+        borderBottom: "1px solid rgba(255,255,255,0.06)",
+      }}
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
           {indicators.map((item, i) => (
@@ -29,8 +36,8 @@ export function TrustBar() {
                 style={{ color: "#D4AF37" }}
               />
               <span
-                className="text-sm font-semibold"
-                style={{ color: "#144D2C", opacity: 0.6 }}
+                className="text-xs font-medium uppercase tracking-wider"
+                style={{ color: "rgba(255,255,255,0.5)" }}
               >
                 {item.text}
               </span>
