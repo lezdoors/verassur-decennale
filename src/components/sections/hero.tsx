@@ -1,38 +1,63 @@
 "use client";
 
-import { ArcGalleryHero } from "@/components/ui/arc-gallery-hero";
-import { Shield, ArrowRight, Phone, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Phone, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Marquee } from "@/components/ui/marquee";
 
-const btpImages = [
-  "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1541123603104-512919d6a96c?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=400&h=400&fit=crop",
-  "https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?w=400&h=400&fit=crop",
+const stats = [
+  { label: "GARANTIE LEGALE", value: "10 ans" },
+  { label: "DEVIS GRATUIT", value: "2 min" },
+  { label: "RAPPEL PAR UN COURTIER", value: "24h" },
+  { label: "PROFILS RESILIES", value: "Acceptes" },
 ];
+
+function StatsMarquee() {
+  return (
+    <Marquee
+      className="border-white/10 border-y bg-black/30 py-2.5 backdrop-blur-sm [--duration:30s] [--gap:2rem]"
+      pauseOnHover
+      repeat={4}
+    >
+      {stats.map((stat) => (
+        <div
+          className="flex items-center gap-3 whitespace-nowrap"
+          key={stat.label}
+        >
+          <span
+            className="font-bold font-mono text-sm tracking-wide"
+            style={{ color: "#D4AF37" }}
+          >
+            {stat.value}
+          </span>
+          <span className="font-medium font-mono text-sm text-white/70 uppercase tracking-[0.15em]">
+            {stat.label}
+          </span>
+          <span className="text-white/30">|</span>
+        </div>
+      ))}
+    </Marquee>
+  );
+}
 
 export function HeroSection() {
   return (
-    <ArcGalleryHero
-      images={btpImages}
-      startAngle={10}
-      endAngle={170}
-      radiusLg={580}
-      radiusMd={420}
-      radiusSm={300}
-      cardSizeLg={120}
-      cardSizeMd={95}
-      cardSizeSm={70}
-    >
-      {/* Header bar - positioned absolutely at top */}
-      <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 lg:px-16 py-6 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <section className="relative flex min-h-screen w-full flex-col items-start justify-end">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-center bg-cover"
+        style={{
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80)",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Header bar */}
+      <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 sm:px-8 lg:px-16 py-4 bg-black/20 backdrop-blur-md border-b border-white/10">
         <div className="flex items-center gap-2">
           <Shield className="h-6 w-6" style={{ color: "#D4AF37" }} />
-          <span className="text-xl font-bold" style={{ color: "#144D2C" }}>
+          <span className="text-xl font-bold text-white">
             Verassur
           </span>
         </div>
@@ -41,101 +66,80 @@ export function HeroSection() {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium transition-opacity hover:opacity-70"
-              style={{ color: "#014421" }}
+              className="text-sm font-medium text-white/70 transition-colors hover:text-white"
             >
               {item}
             </a>
           ))}
         </nav>
-        <a
-          href="tel:0644657005"
-          className="hidden sm:flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white transition-all hover:scale-105"
-          style={{ background: "#144D2C" }}
-        >
-          <Phone className="h-3.5 w-3.5" />
-          06 44 65 70 05
-        </a>
+        <div className="flex items-center gap-3">
+          <a
+            href="tel:0644657005"
+            className="hidden sm:flex items-center gap-2 text-sm font-medium text-white/80 hover:text-white transition-colors"
+          >
+            <Phone className="h-3.5 w-3.5" style={{ color: "#D4AF37" }} />
+            06 44 65 70 05
+          </a>
+          <a
+            href="/devis"
+            className="rounded-none px-5 py-2.5 text-sm font-semibold transition-all hover:scale-105"
+            style={{ background: "#D4AF37", color: "#03260E" }}
+          >
+            Devis gratuit
+          </a>
+        </div>
+      </div>
+
+      {/* Stats marquee */}
+      <div className="relative z-10 w-full mb-6">
+        <StatsMarquee />
       </div>
 
       {/* Hero content */}
-      <div
-        className="text-center max-w-3xl px-6 opacity-0 animate-fade-in"
-        style={{ animationDelay: "800ms", animationFillMode: "forwards" }}
-      >
-        {/* Badge */}
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-semibold"
-          style={{ background: "rgba(20, 77, 44, 0.08)", color: "#144D2C" }}
-        >
-          <Shield className="h-3.5 w-3.5" />
-          Tous profils acceptes &middot; Meme resilies et malusses
-        </div>
+      <div className="relative z-10 w-full px-6 pb-12 sm:px-8 sm:pb-20 lg:px-16 lg:pb-28">
+        <div className="flex flex-col gap-8 sm:flex-row sm:items-end">
+          {/* Left: headline + CTA */}
+          <div className="w-full space-y-6 sm:w-1/2">
+            <h1 className="font-medium text-4xl text-white leading-[1.05] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
+              Votre{" "}
+              <span style={{ color: "#D4AF37" }}>garantie</span>
+              <br />
+              <span style={{ color: "#D4AF37" }}>decennale</span>,
+              <br />
+              <span className="text-white">simplement</span>
+            </h1>
+            <Button
+              asChild
+              className="rounded-none py-0 pr-0 font-semibold text-lg h-auto"
+              style={{ background: "#D4AF37", color: "#03260E" }}
+            >
+              <a href="/devis">
+                Obtenir mon devis gratuit
+                <span className="border-l border-black/20 p-3">
+                  <ArrowRight className="h-5 w-5" />
+                </span>
+              </a>
+            </Button>
+          </div>
 
-        <h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight"
-          style={{ color: "#03260E", letterSpacing: "-0.02em" }}
-        >
-          Votre garantie decennale, simplement
-        </h1>
-
-        <p
-          className="mt-5 text-lg leading-relaxed mx-auto max-w-xl"
-          style={{ color: "#144D2C" }}
-        >
-          Protegez tous vos travaux avec les meilleures garanties.
-          Devis gratuit en 2 minutes, un courtier vous rappelle sous 24h.
-        </p>
-
-        {/* CTAs */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="/devis"
-            className="flex items-center gap-2 rounded-full px-8 py-4 text-base font-semibold transition-all hover:scale-105"
-            style={{
-              background: "#D4AF37",
-              color: "#03260E",
-              boxShadow: "0 4px 20px rgba(212, 175, 55, 0.35)",
-            }}
-          >
-            Obtenir mon devis gratuit
-            <ArrowRight className="h-4 w-4" />
-          </a>
-          <a
-            href="tel:0644657005"
-            className="flex items-center gap-2 rounded-full px-8 py-4 text-base font-medium transition-all hover:scale-105"
-            style={{ border: "2px solid #144D2C", color: "#144D2C" }}
-          >
-            <Phone className="h-4 w-4" style={{ color: "#D4AF37" }} />
-            Appeler un courtier
-          </a>
-        </div>
-
-        {/* Disclaimer */}
-        <p
-          className="mt-5 text-sm italic"
-          style={{ color: "#144D2C", opacity: 0.6 }}
-        >
-          *Gratuit et sans engagement — Courtier agree ORIAS N° 25004749
-        </p>
-
-        {/* Trust indicators */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm"
-          style={{ color: "#144D2C", opacity: 0.7 }}
-        >
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="h-4 w-4" style={{ color: "#144D2C" }} />
-            Attestation sous 48h
-          </span>
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="h-4 w-4" style={{ color: "#144D2C" }} />
-            Resilies acceptes
-          </span>
-          <span className="flex items-center gap-1.5">
-            <CheckCircle2 className="h-4 w-4" style={{ color: "#144D2C" }} />
-            Gratuit et sans engagement
-          </span>
+          {/* Right: description */}
+          <div className="w-full sm:w-1/2">
+            <p
+              className="text-base sm:text-right md:text-xl leading-relaxed"
+              style={{ color: "#D4AF37" }}
+            >
+              Protegez tous vos travaux avec les meilleures garanties.
+              Tous profils acceptes, meme resilies ou malusses.
+              Un courtier specialise BTP vous rappelle sous 24h.
+            </p>
+            <div className="mt-4 flex items-center gap-4 sm:justify-end">
+              <span className="text-xs text-white/40">
+                Courtier agree ORIAS N° 25004749
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-    </ArcGalleryHero>
+    </section>
   );
 }
