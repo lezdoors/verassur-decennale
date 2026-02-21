@@ -24,7 +24,7 @@ export function ParallaxSections() {
     <div className="bg-white">
       {/* Panel 1: Hero — French building facade, golden hour */}
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1576762846960-c6f1dcffade1?w=1920&q=80"
+        imgUrl="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
         subheading="Assurance decennale BTP"
         heading="Votre garantie, simplement."
       >

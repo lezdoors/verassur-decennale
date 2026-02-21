@@ -8,7 +8,7 @@ export function ChatbotBubble() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-5 left-4 z-50 sm:bottom-6 sm:left-6">
+    <div className="fixed bottom-5 right-4 z-50 sm:bottom-6 sm:right-6">
       <AnimatePresence>
         {isOpen && (
           <motion.div

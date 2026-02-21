@@ -32,7 +32,7 @@ export function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="fixed bottom-5 left-1/2 z-[60] w-80 -translate-x-1/2 rounded-lg border border-neutral-200 bg-white p-4 text-sm text-neutral-500 shadow-2xl sm:bottom-6 md:p-6"
+          className="fixed bottom-5 left-4 z-[60] w-80 sm:left-6 rounded-lg border border-neutral-200 bg-white p-4 text-sm text-neutral-500 shadow-2xl sm:bottom-6 md:p-6"
         >
           <div className="relative flex w-full items-center justify-center gap-2 pb-3">
             {/* eslint-disable-next-line @next/next/no-img-element */}
