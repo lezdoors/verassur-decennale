@@ -97,7 +97,7 @@ export function Metiers() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-teal-600">
             Tous les corps de metier
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
@@ -115,9 +115,9 @@ export function Metiers() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
-              className="group flex gap-4 rounded-xl border border-neutral-200 bg-neutral-50 p-5 transition-all hover:border-blue-200 hover:shadow-md"
+              className="group flex gap-4 rounded-xl border border-neutral-200 bg-neutral-50 p-5 transition-all hover:border-teal-200 hover:shadow-md"
             >
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-teal-600 text-white">
                 <m.icon className="h-5 w-5" />
               </div>
               <div className="min-w-0">
@@ -126,7 +126,7 @@ export function Metiers() {
                   <span
                     className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${
                       m.obligatoire
-                        ? "bg-blue-600 text-white"
+                        ? "bg-teal-600 text-white"
                         : "bg-neutral-200 text-neutral-500"
                     }`}
                   >
@@ -150,7 +150,7 @@ export function Metiers() {
         >
           <a
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-blue-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-teal-700"
           >
             Obtenir mon devis gratuit
             <ArrowUpRight className="h-5 w-5" />

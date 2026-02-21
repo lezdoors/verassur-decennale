@@ -32,7 +32,7 @@ export function FinalCTA() {
         >
           <a
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-teal-700"
           >
             Obtenir mon devis gratuit
             <ArrowUpRight className="h-4 w-4" />

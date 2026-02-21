@@ -43,8 +43,8 @@ export function CookieBanner() {
           </button>
 
           <div className="flex gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-50">
-              <Cookie className="h-5 w-5 text-blue-600" />
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-50">
+              <Cookie className="h-5 w-5 text-teal-600" />
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium text-neutral-900">
@@ -57,7 +57,7 @@ export function CookieBanner() {
               <div className="mt-4 flex items-center gap-2">
                 <button
                   onClick={accept}
-                  className="rounded-lg bg-blue-600 px-4 py-2 text-xs font-medium text-white transition-all hover:bg-blue-700"
+                  className="rounded-lg bg-teal-600 px-4 py-2 text-xs font-medium text-white transition-all hover:bg-teal-700"
                 >
                   Accepter
                 </button>

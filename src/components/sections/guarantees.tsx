@@ -66,7 +66,7 @@ export function Guarantees() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-teal-600">
             Loi Spinetta — Articles L.241-1 et suivants
           </p>
           <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
@@ -84,13 +84,13 @@ export function Guarantees() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="group rounded-xl border border-neutral-200 bg-neutral-50 p-6 transition-all hover:border-blue-200 hover:shadow-md"
+              className="group rounded-xl border border-neutral-200 bg-neutral-50 p-6 transition-all hover:border-teal-200 hover:shadow-md"
             >
               <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-600 text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-teal-600 text-white">
                   <g.icon className="h-5 w-5" />
                 </div>
-                <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                <span className="rounded-full bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-700">
                   {g.badge}
                 </span>
               </div>
@@ -108,7 +108,7 @@ export function Guarantees() {
         >
           <a
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-blue-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-teal-700"
           >
             Obtenir mon devis gratuit
             <ArrowUpRight className="h-5 w-5" />
