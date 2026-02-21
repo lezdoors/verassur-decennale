@@ -1,6 +1,6 @@
 import { ParallaxSections } from "@/components/sections/parallax-sections";
 import { Testimonials } from "@/components/sections/testimonials";
-import { FAQ } from "@/components/sections/faq";
+import { FAQPremium } from "@/components/sections/faq-premium";
 import { FinalCTA } from "@/components/sections/final-cta";
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <ParallaxSections />
       <Testimonials />
-      <FAQ />
+      <FAQPremium />
       <FinalCTA />
     </>
   );

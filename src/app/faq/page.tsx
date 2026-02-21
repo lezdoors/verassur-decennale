@@ -1,9 +1,9 @@
-import { FAQ } from "@/components/sections/faq";
+import { FAQPremium } from "@/components/sections/faq-premium";
 
 export default function FAQPage() {
   return (
     <div className="pt-16">
-      <FAQ />
+      <FAQPremium />
     </div>
   );
 }

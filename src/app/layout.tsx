@@ -4,6 +4,8 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/sections/footer";
 import { PhoneFloatingBadge } from "@/components/phone-floating-badge";
+import { ChatbotBubble } from "@/components/chatbot-bubble";
+import { CookieBanner } from "@/components/cookie-banner";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -36,6 +38,8 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <PhoneFloatingBadge />
+        <ChatbotBubble />
+        <CookieBanner />
       </body>
     </html>
   );
