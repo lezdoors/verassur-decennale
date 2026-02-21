@@ -8,6 +8,7 @@ import {
   Building,
   FileCheck,
   AlertTriangle,
+  ArrowUpRight,
 } from "lucide-react";
 
 const guarantees = [
@@ -43,96 +44,76 @@ const guarantees = [
     icon: FileCheck,
     title: "Ouvrages indissociables",
     description:
-      "Canalisations encastrees, planchers, plafonds, chauffage central, huisseries, installation electrique encastree, reseaux d'assainissement.",
+      "Canalisations encastrees, planchers, plafonds, chauffage central, installation electrique encastree, reseaux d'assainissement.",
     badge: "Complet",
   },
   {
     icon: AlertTriangle,
     title: "Sans assurance : les risques",
     description:
-      "Sanctions penales, interdiction d'exercer, prise en charge financiere des reparations (dizaines de milliers d'euros), perte de credibilite.",
+      "Sanctions penales (jusqu'a 75 000EUR d'amende), interdiction d'exercer, prise en charge financiere des reparations, perte de credibilite.",
     badge: "Obligatoire",
   },
 ];
 
 export function Guarantees() {
   return (
-    <section
-      id="garanties"
-      className="py-20 sm:py-28"
-      style={{ background: "#F8FAFC" }}
-    >
+    <section className="bg-white py-20 sm:py-28">
+      {/* Page header */}
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center"
         >
-          <span
-            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
-            style={{ color: "#D4AF37" }}
-          >
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Loi Spinetta — Articles L.241-1 et suivants
-          </span>
-          <h2
-            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
-            style={{ color: "#111827" }}
-          >
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
             Ce que couvre la garantie decennale
-          </h2>
-          <p
-            className="mx-auto mt-4 max-w-2xl text-base"
-            style={{ color: "#6B7280" }}
-          >
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-neutral-500">
             Tout constructeur est responsable des desordres compromettant la solidite de l&apos;ouvrage ou le rendant impropre a son usage, pendant 10 ans apres reception des travaux.
           </p>
         </motion.div>
 
-        <div className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {guarantees.map((g, i) => (
             <motion.div
               key={g.title}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              whileHover={{
-                y: -4,
-                transition: { duration: 0.2 },
-              }}
-              className="group relative p-6 transition-all cursor-default"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-              }}
+              className="group rounded-xl border border-neutral-200 bg-neutral-50 p-6 transition-all hover:border-blue-200 hover:shadow-md"
             >
-              <span
-                className="absolute right-5 top-5 text-xs font-medium uppercase tracking-wider"
-                style={{ color: "#D4AF37" }}
-              >
-                {g.badge}
-              </span>
-
-              <div
-                className="mb-4 flex h-12 w-12 items-center justify-center rounded-sm transition-colors"
-                style={{ background: "rgba(212, 175, 55, 0.1)" }}
-              >
-                <g.icon className="h-5 w-5" style={{ color: "#D4AF37" }} />
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-600 text-white">
+                  <g.icon className="h-5 w-5" />
+                </div>
+                <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                  {g.badge}
+                </span>
               </div>
-
-              <h3 className="text-base font-medium" style={{ color: "#111827" }}>{g.title}</h3>
-              <p
-                className="mt-2 text-sm leading-relaxed"
-                style={{ color: "#6B7280" }}
-              >
-                {g.description}
-              </p>
+              <h3 className="text-base font-semibold text-neutral-900">{g.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-neutral-500">{g.description}</p>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="mt-12 text-center"
+        >
+          <a
+            href="/devis"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-blue-700"
+          >
+            Obtenir mon devis gratuit
+            <ArrowUpRight className="h-5 w-5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

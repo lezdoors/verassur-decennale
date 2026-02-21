@@ -34,7 +34,7 @@ export function Footer() {
           </p>
           <a
             href="tel:0644657005"
-            className="inline-flex items-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-neutral-900 transition-all hover:bg-neutral-100"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-blue-700"
           >
             <Phone className="h-3.5 w-3.5" />
             06 44 65 70 05
@@ -43,20 +43,20 @@ export function Footer() {
 
         {/* Nos assurances */}
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-blue-400">
             Nos assurances
           </h3>
           <nav className="mt-4 flex flex-col space-y-2.5 text-sm">
-            <Link href="#garanties" className="text-neutral-500 transition-colors hover:text-white">Assurance Decennale</Link>
+            <Link href="/garanties" className="text-neutral-500 transition-colors hover:text-white">Assurance Decennale</Link>
             <Link href="#" className="text-neutral-500 transition-colors hover:text-white">RC Professionnelle</Link>
-            <Link href="#metiers" className="text-neutral-500 transition-colors hover:text-white">Tous les metiers BTP</Link>
-            <Link href="#faq" className="text-neutral-500 transition-colors hover:text-white">Questions frequentes</Link>
+            <Link href="/metiers" className="text-neutral-500 transition-colors hover:text-white">Tous les metiers BTP</Link>
+            <Link href="/faq" className="text-neutral-500 transition-colors hover:text-white">Questions frequentes</Link>
           </nav>
         </div>
 
         {/* Contact */}
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-blue-400">
             Contact
           </h3>
           <nav className="mt-4 flex flex-col space-y-3 text-sm">
@@ -77,7 +77,7 @@ export function Footer() {
 
         {/* Newsletter */}
         <div className="space-y-4">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-blue-400">
             Restez informe
           </h3>
           <p className="text-sm text-neutral-500">
@@ -91,7 +91,7 @@ export function Footer() {
             />
             <Button
               type="submit"
-              className="rounded-lg bg-white font-medium text-neutral-900 hover:bg-neutral-100"
+              className="rounded-lg bg-blue-600 font-medium text-white hover:bg-blue-700"
             >
               OK
             </Button>

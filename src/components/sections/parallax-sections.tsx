@@ -79,7 +79,7 @@ function HeroContent() {
         </p>
         <a
           href="/devis"
-          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-neutral-900 px-9 py-4 text-xl font-medium text-white transition-colors hover:bg-neutral-700 md:w-fit"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-9 py-4 text-xl font-medium text-white transition-colors hover:bg-blue-700 md:w-fit"
         >
           Obtenir mon devis gratuit
           <ArrowUpRight className="h-5 w-5" />
@@ -135,7 +135,7 @@ function HowItWorksContent() {
               key={step.number}
               className="flex gap-5 rounded-xl border border-neutral-200 bg-neutral-50 p-6 transition-all hover:border-neutral-300 hover:shadow-md"
             >
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-neutral-900 text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
                 <step.icon className="h-6 w-6" />
               </div>
               <div className="flex-1">
@@ -143,7 +143,7 @@ function HowItWorksContent() {
                   <h3 className="text-lg font-semibold text-neutral-900">
                     {step.title}
                   </h3>
-                  <span className="rounded-full bg-neutral-900 px-3 py-0.5 text-xs font-medium text-white">
+                  <span className="rounded-full bg-blue-600 px-3 py-0.5 text-xs font-medium text-white">
                     {step.time}
                   </span>
                 </div>
@@ -155,7 +155,7 @@ function HowItWorksContent() {
           ))}
           <a
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-neutral-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-blue-700"
           >
             Obtenir mon devis gratuit
             <ArrowUpRight className="h-5 w-5" />
@@ -232,10 +232,10 @@ function GuaranteesContent() {
             className="group rounded-xl border border-neutral-200 bg-neutral-50 p-6 transition-all hover:border-neutral-300 hover:shadow-md"
           >
             <div className="mb-4 flex items-center justify-between">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-neutral-900 text-white">
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-blue-600 text-white">
                 <g.icon className="h-5 w-5" />
               </div>
-              <span className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-semibold text-neutral-600">
+              <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
                 {g.badge}
               </span>
             </div>
@@ -278,7 +278,7 @@ function MetiersContent() {
           </p>
           <a
             href="/devis"
-            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-neutral-900 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-neutral-700"
+            className="mt-8 inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-blue-700"
           >
             Devis gratuit
             <ArrowUpRight className="h-5 w-5" />
@@ -291,7 +291,7 @@ function MetiersContent() {
                 key={m.name}
                 className="flex items-center gap-4 rounded-xl border border-neutral-200 bg-neutral-50 p-4 transition-all hover:border-neutral-300 hover:shadow-md"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-neutral-900 text-white">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
                   <m.icon className="h-5 w-5" />
                 </div>
                 <div>
@@ -300,7 +300,7 @@ function MetiersContent() {
                   </p>
                   <div className="mt-0.5 flex items-center gap-2">
                     <span className="text-xs text-neutral-400">{m.type}</span>
-                    <span className="rounded-full bg-neutral-900 px-2 py-0.5 text-[10px] font-medium text-white">
+                    <span className="rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-medium text-white">
                       Obligatoire
                     </span>
                   </div>

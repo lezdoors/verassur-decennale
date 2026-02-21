@@ -12,6 +12,7 @@ import {
   TreePine,
   Building2,
   HardHat,
+  ArrowUpRight,
 } from "lucide-react";
 
 const metiers = [
@@ -89,31 +90,20 @@ const metiers = [
 
 export function Metiers() {
   return (
-    <section id="metiers" className="py-20 sm:py-28" style={{ background: "#FFFFFF" }}>
+    <section className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center"
         >
-          <span
-            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
-            style={{ color: "#D4AF37" }}
-          >
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-blue-600">
             Tous les corps de metier
-          </span>
-          <h2
-            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
-            style={{ color: "#111827" }}
-          >
+          </p>
+          <h1 className="text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">
             Votre metier, votre couverture
-          </h2>
-          <p
-            className="mx-auto mt-4 max-w-2xl text-base"
-            style={{ color: "#6B7280" }}
-          >
+          </h1>
+          <p className="mt-4 max-w-2xl text-lg text-neutral-500">
             Chaque metier du batiment a des risques specifiques. Voici ce que la decennale couvre selon votre activite.
           </p>
         </motion.div>
@@ -123,60 +113,49 @@ export function Metiers() {
             <motion.div
               key={m.name}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05, duration: 0.4 }}
-              whileHover={{
-                y: -3,
-                transition: { duration: 0.2 },
-              }}
-              className="group flex gap-4 p-5 cursor-default transition-all"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-              }}
+              className="group flex gap-4 rounded-xl border border-neutral-200 bg-neutral-50 p-5 transition-all hover:border-blue-200 hover:shadow-md"
             >
-              <div
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm transition-all"
-                style={{ background: "rgba(212, 175, 55, 0.1)" }}
-              >
-                <m.icon
-                  className="h-5 w-5"
-                  style={{ color: "#D4AF37" }}
-                />
+              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-blue-600 text-white">
+                <m.icon className="h-5 w-5" />
               </div>
               <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="text-sm font-medium" style={{ color: "#111827" }}>
-                    {m.name}
-                  </span>
+                  <span className="text-sm font-semibold text-neutral-900">{m.name}</span>
                   <span
-                    className="text-[10px] font-medium uppercase tracking-wider px-2 py-0.5"
-                    style={{
-                      background: m.obligatoire ? "rgba(212, 175, 55, 0.1)" : "#F1F5F9",
-                      color: m.obligatoire ? "#D4AF37" : "#6B7280",
-                    }}
+                    className={`rounded-full px-2 py-0.5 text-[10px] font-medium ${
+                      m.obligatoire
+                        ? "bg-blue-600 text-white"
+                        : "bg-neutral-200 text-neutral-500"
+                    }`}
                   >
                     {m.obligatoire ? "Obligatoire" : "Conditionnel"}
                   </span>
                 </div>
-                <p
-                  className="text-[11px] font-medium mt-0.5 uppercase tracking-wider"
-                  style={{ color: "#9CA3AF" }}
-                >
+                <p className="mt-0.5 text-[11px] font-medium uppercase tracking-wider text-neutral-400">
                   {m.type}
                 </p>
-                <p
-                  className="text-xs mt-1.5 leading-relaxed"
-                  style={{ color: "#6B7280" }}
-                >
-                  {m.exemple}
-                </p>
+                <p className="mt-1.5 text-xs leading-relaxed text-neutral-500">{m.exemple}</p>
               </div>
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="mt-12 text-center"
+        >
+          <a
+            href="/devis"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-8 py-4 text-lg font-medium text-white transition-colors hover:bg-blue-700"
+          >
+            Obtenir mon devis gratuit
+            <ArrowUpRight className="h-5 w-5" />
+          </a>
+        </motion.div>
       </div>
     </section>
   );

@@ -45,7 +45,7 @@ export function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-neutral-400">
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-blue-600">
             Avis clients
           </p>
           <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
@@ -81,7 +81,7 @@ export function Testimonials() {
               </p>
 
               <div className="mt-6 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-600 text-sm font-semibold text-white">
                   {t.name[0]}
                 </div>
                 <div>

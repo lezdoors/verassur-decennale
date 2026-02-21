@@ -13,19 +13,15 @@ export function Header() {
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
-          {[
-            { label: "Garanties", href: "/#garanties" },
-            { label: "Metiers", href: "/#metiers" },
-            { label: "FAQ", href: "/#faq" },
-          ].map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-sm font-medium text-white/60 transition-colors hover:text-white"
-            >
-              {item.label}
-            </Link>
-          ))}
+          <Link href="/garanties" className="text-sm font-medium text-white/60 transition-colors hover:text-white">
+            Garanties
+          </Link>
+          <Link href="/metiers" className="text-sm font-medium text-white/60 transition-colors hover:text-white">
+            Metiers
+          </Link>
+          <Link href="/faq" className="text-sm font-medium text-white/60 transition-colors hover:text-white">
+            FAQ
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">
@@ -38,7 +34,7 @@ export function Header() {
           </a>
           <Link
             href="/devis"
-            className="rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-neutral-900 transition-all hover:bg-neutral-100"
+            className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-blue-700"
           >
             Devis gratuit
           </Link>
