@@ -5,7 +5,7 @@ import { ArrowUpRight, Phone, Shield } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden bg-neutral-900 py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-navy-mid py-20 sm:py-28">
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,14 +32,14 @@ export function FinalCTA() {
         >
           <a
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-violet-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-gold px-8 py-4 text-base font-semibold text-navy transition-all hover:bg-gold-light"
           >
             Obtenir mon devis gratuit
             <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
             href="tel:0644657005"
-            className="inline-flex items-center gap-2.5 rounded-lg border border-neutral-700 px-8 py-4 text-base font-medium text-neutral-400 transition-all hover:border-neutral-500 hover:text-white"
+            className="inline-flex items-center gap-2.5 rounded-lg border border-navy-light/30 px-8 py-4 text-base font-medium text-neutral-400 transition-all hover:border-navy-light hover:text-white"
           >
             <Phone className="h-4 w-4" />
             06 44 65 70 05

@@ -102,7 +102,7 @@ export function ContactForm() {
               <div
                 className="h-1 flex-1 rounded-full transition-all duration-500"
                 style={{
-                  background: s <= step ? "#2563EB" : "#E5E5E5",
+                  background: s <= step ? "#FFC300" : "#E5E5E5",
                 }}
               />
             </div>
@@ -126,8 +126,8 @@ export function ContactForm() {
           {step === 1 && (
             <div className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-600">
-                  <Building2 className="h-4 w-4 text-white" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-light">
+                  <Building2 className="h-4 w-4 text-gold" />
                 </div>
                 <h3 className="text-lg font-semibold text-neutral-900">
                   Votre activite
@@ -146,7 +146,7 @@ export function ContactForm() {
                       onClick={() => update("metier", m)}
                       className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-left border ${
                         form.metier === m
-                          ? "border-violet-600 bg-violet-600 text-white"
+                          ? "border-gold bg-gold text-navy"
                           : "border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300"
                       }`}
                     >
@@ -168,7 +168,7 @@ export function ContactForm() {
                       onClick={() => update("statut", s)}
                       className={`rounded-lg px-3 py-2.5 text-sm font-medium transition-all text-left border ${
                         form.statut === s
-                          ? "border-violet-600 bg-violet-600 text-white"
+                          ? "border-gold bg-gold text-navy"
                           : "border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300"
                       }`}
                     >
@@ -209,8 +209,8 @@ export function ContactForm() {
           {step === 2 && (
             <div className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-600">
-                  <AlertTriangle className="h-4 w-4 text-white" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-light">
+                  <AlertTriangle className="h-4 w-4 text-gold" />
                 </div>
                 <h3 className="text-lg font-semibold text-neutral-900">
                   Votre situation
@@ -229,7 +229,7 @@ export function ContactForm() {
                       onClick={() => update("situation", s.label)}
                       className={`w-full rounded-lg px-4 py-3 text-left transition-all flex items-center justify-between border ${
                         form.situation === s.label
-                          ? "border-violet-600 bg-violet-600 text-white"
+                          ? "border-gold bg-gold text-navy"
                           : "border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300"
                       }`}
                     >
@@ -269,7 +269,7 @@ export function ContactForm() {
                       onClick={() => update("sinistres", n)}
                       className={`flex-1 rounded-lg py-2.5 text-sm font-medium transition-all border ${
                         form.sinistres === n
-                          ? "border-violet-600 bg-violet-600 text-white"
+                          ? "border-gold bg-gold text-navy"
                           : "border-neutral-200 bg-white text-neutral-600 hover:border-neutral-300"
                       }`}
                     >
@@ -297,8 +297,8 @@ export function ContactForm() {
           {step === 3 && (
             <div className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-violet-600">
-                  <User className="h-4 w-4 text-white" />
+                <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-navy-light">
+                  <User className="h-4 w-4 text-gold" />
                 </div>
                 <h3 className="text-lg font-semibold text-neutral-900">
                   Vos coordonnees
@@ -375,7 +375,7 @@ export function ContactForm() {
                 disabled={!canNext}
                 className={`h-12 rounded-lg px-8 text-base font-medium transition-all ${
                   canNext
-                    ? "bg-violet-600 text-white hover:bg-violet-700"
+                    ? "bg-gold text-navy hover:bg-gold-light"
                     : "bg-neutral-100 text-neutral-400"
                 }`}
               >
@@ -388,7 +388,7 @@ export function ContactForm() {
                 disabled={!canNext}
                 className={`h-12 rounded-lg px-8 text-base font-medium transition-all ${
                   canNext
-                    ? "bg-violet-600 text-white hover:bg-violet-700"
+                    ? "bg-gold text-navy hover:bg-gold-light"
                     : "bg-neutral-100 text-neutral-400"
                 }`}
               >

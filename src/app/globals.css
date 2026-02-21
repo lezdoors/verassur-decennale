@@ -45,9 +45,13 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --color-brand: #2D6A4F;
-  --color-brand-light: #40916C;
-  --color-brand-dark: #1B4332;
+  /* Golden Twilight palette */
+  --color-navy: #000814;
+  --color-navy-mid: #001D3D;
+  --color-navy-light: #003566;
+  --color-gold: #FFC300;
+  --color-gold-light: #FFD60A;
+  --color-gold-dark: #E0AC00;
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;

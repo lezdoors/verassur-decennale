@@ -14,7 +14,7 @@ const fadeIn = {
 
 export function Footer() {
   return (
-    <footer className="w-full border-t border-neutral-800 bg-neutral-950">
+    <footer className="w-full border-t border-navy-light/30 bg-navy">
       <motion.div
         initial="hidden"
         whileInView="visible"
@@ -34,7 +34,7 @@ export function Footer() {
           </p>
           <a
             href="tel:0644657005"
-            className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-violet-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-gold px-4 py-2 text-sm font-medium text-navy transition-all hover:bg-gold-light"
           >
             <Phone className="h-3.5 w-3.5" />
             06 44 65 70 05
@@ -43,7 +43,7 @@ export function Footer() {
 
         {/* Nos assurances */}
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-violet-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-gold">
             Nos assurances
           </h3>
           <nav className="mt-4 flex flex-col space-y-2.5 text-sm">
@@ -56,7 +56,7 @@ export function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-violet-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-gold">
             Contact
           </h3>
           <nav className="mt-4 flex flex-col space-y-3 text-sm">
@@ -77,7 +77,7 @@ export function Footer() {
 
         {/* Newsletter */}
         <div className="space-y-4">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-violet-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-gold">
             Restez informe
           </h3>
           <p className="text-sm text-neutral-500">
@@ -87,11 +87,11 @@ export function Footer() {
             <Input
               type="email"
               placeholder="Votre email"
-              className="max-w-lg flex-1 rounded-lg border-neutral-800 bg-neutral-900 text-white placeholder:text-neutral-600"
+              className="max-w-lg flex-1 rounded-lg border-navy-light/30 bg-navy-mid text-white placeholder:text-neutral-600"
             />
             <Button
               type="submit"
-              className="rounded-lg bg-violet-600 font-medium text-white hover:bg-violet-700"
+              className="rounded-lg bg-gold font-medium text-navy hover:bg-gold-light"
             >
               OK
             </Button>
@@ -99,7 +99,7 @@ export function Footer() {
         </div>
       </motion.div>
 
-      <div className="border-t border-neutral-800">
+      <div className="border-t border-navy-light/30">
         <div className="mx-auto max-w-7xl flex flex-col items-center justify-between gap-4 py-6 px-6 md:h-16 md:flex-row md:py-0">
           <p className="text-xs text-neutral-600">
             &copy; {new Date().getFullYear()} AssureNao. Tous droits reserves.

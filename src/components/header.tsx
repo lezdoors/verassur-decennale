@@ -6,7 +6,7 @@ import { Logo } from "@/components/logo";
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-neutral-950/80 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-navy/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/">
           <Logo variant="light" className="h-7 w-auto" />
@@ -34,7 +34,7 @@ export function Header() {
           </a>
           <Link
             href="/devis"
-            className="rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-violet-700"
+            className="rounded-lg bg-gold px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:bg-gold-light"
           >
             Devis gratuit
           </Link>

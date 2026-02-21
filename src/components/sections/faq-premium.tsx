@@ -62,7 +62,7 @@ function FAQItem({
         onClick={onToggle}
         className="flex w-full items-start justify-between gap-4 py-6 text-left"
       >
-        <span className="text-base font-medium text-neutral-900 group-hover:text-violet-600 transition-colors">
+        <span className="text-base font-medium text-neutral-900 group-hover:text-navy-light transition-colors">
           {faq.q}
         </span>
         <motion.div
@@ -106,9 +106,9 @@ export function FAQPremium() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-violet-200 bg-violet-50 px-4 py-1.5">
-            <div className="h-1.5 w-1.5 rounded-full bg-violet-600 animate-pulse" />
-            <span className="text-xs font-medium text-violet-700">
+          <div className="mx-auto mb-6 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5">
+            <div className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+            <span className="text-xs font-medium text-navy-light">
               Questions frequentes
             </span>
           </div>
@@ -149,7 +149,7 @@ export function FAQPremium() {
           <div className="mt-5 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
               href="/devis"
-              className="inline-flex items-center rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-medium text-white transition-all hover:bg-violet-700"
+              className="inline-flex items-center rounded-lg bg-gold px-6 py-2.5 text-sm font-medium text-navy transition-all hover:bg-gold-light"
             >
               Demander un devis
             </a>
