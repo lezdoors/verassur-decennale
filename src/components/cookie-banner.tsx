@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Cookie, X } from "lucide-react";
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,42 +32,40 @@ export function CookieBanner() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", damping: 25, stiffness: 300 }}
-          className="fixed bottom-5 left-1/2 z-[60] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-2xl border border-neutral-200 bg-white p-5 shadow-2xl sm:bottom-6"
+          className="fixed bottom-5 left-1/2 z-[60] w-80 -translate-x-1/2 rounded-lg border border-neutral-200 bg-white p-4 text-sm text-neutral-500 shadow-2xl sm:bottom-6 md:p-6"
         >
-          <button
-            onClick={decline}
-            className="absolute right-3 top-3 rounded-full p-1 text-neutral-400 transition-colors hover:text-neutral-600"
-          >
-            <X className="h-4 w-4" />
-          </button>
-
-          <div className="flex gap-4">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-teal-50">
-              <Cookie className="h-5 w-5 text-teal-600" />
-            </div>
-            <div className="flex-1">
-              <p className="text-sm font-medium text-neutral-900">
-                On utilise des cookies
-              </p>
-              <p className="mt-1 text-xs leading-relaxed text-neutral-500">
-                Pour ameliorer votre experience et analyser le trafic. Aucune
-                donnee personnelle n&apos;est partagee sans votre accord.
-              </p>
-              <div className="mt-4 flex items-center gap-2">
-                <button
-                  onClick={accept}
-                  className="rounded-lg bg-teal-600 px-4 py-2 text-xs font-medium text-white transition-all hover:bg-teal-700"
-                >
-                  Accepter
-                </button>
-                <button
-                  onClick={decline}
-                  className="rounded-lg border border-neutral-200 px-4 py-2 text-xs font-medium text-neutral-600 transition-all hover:bg-neutral-50"
-                >
-                  Refuser
-                </button>
-              </div>
-            </div>
+          <div className="relative flex w-full items-center justify-center gap-2 pb-3">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="absolute -top-12"
+              src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/cookies/cookieImage2.svg"
+              alt="Cookie"
+            />
+            <h2 className="w-full pt-3 text-left text-xl font-medium text-neutral-800">
+              Votre vie privee compte
+            </h2>
+          </div>
+          <p>
+            Nous utilisons des cookies pour ameliorer votre experience et
+            analyser le trafic. Pour en savoir plus, consultez notre{" "}
+            <a href="#" className="font-medium underline">
+              Politique de confidentialite.
+            </a>
+          </p>
+          <div className="mt-6 flex w-full items-center justify-between gap-3">
+            <button
+              onClick={decline}
+              className="underline transition-colors hover:text-neutral-800"
+            >
+              Refuser
+            </button>
+            <button
+              type="button"
+              onClick={accept}
+              className="rounded bg-teal-600 px-6 py-2 font-medium text-white transition active:scale-95 hover:bg-teal-700"
+            >
+              Accepter
+            </button>
           </div>
         </motion.div>
       )}
