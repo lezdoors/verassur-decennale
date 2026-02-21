@@ -1,12 +1,37 @@
 "use client";
 
 import { TextParallaxContent } from "@/components/ui/text-parallax-content";
-import { ArrowUpRight, Shield, FileCheck, PhoneCall, BadgeCheck, Scale, Wrench, Building, AlertTriangle, Hammer, Zap, Droplets, Home, Layers, HardHat } from "lucide-react";
+import {
+  ArrowUpRight,
+  Shield,
+  FileCheck,
+  PhoneCall,
+  BadgeCheck,
+  Scale,
+  Wrench,
+  Building,
+  AlertTriangle,
+  Hammer,
+  Zap,
+  Droplets,
+  Home,
+  Layers,
+  HardHat,
+} from "lucide-react";
 
 export function ParallaxSections() {
   return (
     <div className="bg-white">
-      {/* Panel 1: Comment ca marche */}
+      {/* Panel 1: Hero — modern building, clean architecture */}
+      <TextParallaxContent
+        imgUrl="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+        subheading="Assurance decennale BTP"
+        heading="Votre garantie, simplement."
+      >
+        <HeroContent />
+      </TextParallaxContent>
+
+      {/* Panel 2: How it works — team on construction site */}
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
         subheading="Simple et rapide"
@@ -15,7 +40,7 @@ export function ParallaxSections() {
         <HowItWorksContent />
       </TextParallaxContent>
 
-      {/* Panel 2: Garanties */}
+      {/* Panel 3: Guarantees — building under construction, cranes */}
       <TextParallaxContent
         imgUrl="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80"
         subheading="Loi Spinetta — Article L.241-1"
@@ -24,9 +49,9 @@ export function ParallaxSections() {
         <GuaranteesContent />
       </TextParallaxContent>
 
-      {/* Panel 3: Tous les metiers */}
+      {/* Panel 4: Metiers — worker with hard hat, close-up */}
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80"
+        imgUrl="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=80"
         subheading="Tous corps de metier"
         heading="Votre metier, couvert."
       >
@@ -36,27 +61,58 @@ export function ParallaxSections() {
   );
 }
 
-/* ── Panel 1 content: How it works ── */
+/* ── Panel 1 content: Hero / intro ── */
+function HeroContent() {
+  return (
+    <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 px-4 pb-24 pt-12 md:grid-cols-12 md:px-8">
+      <h2 className="col-span-1 text-3xl font-bold text-neutral-900 md:col-span-4 md:text-4xl">
+        Protegez vos chantiers avec la meilleure couverture
+      </h2>
+      <div className="col-span-1 md:col-span-8">
+        <p className="mb-4 text-xl text-neutral-500 md:text-2xl">
+          Tous profils acceptes, meme resilies ou malusses. Un courtier
+          specialise BTP vous rappelle sous 24h avec les meilleures offres
+          du marche.
+        </p>
+        <p className="mb-8 text-xl text-neutral-500 md:text-2xl">
+          Courtier agree ORIAS N° 25004749. Devis gratuit et sans engagement.
+        </p>
+        <a
+          href="/devis"
+          className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-neutral-900 px-9 py-4 text-xl font-medium text-white transition-colors hover:bg-neutral-700 md:w-fit"
+        >
+          Obtenir mon devis gratuit
+          <ArrowUpRight className="h-5 w-5" />
+        </a>
+      </div>
+    </div>
+  );
+}
+
+/* ── Panel 2 content: How it works ── */
 const steps = [
   {
     icon: FileCheck,
     number: "01",
     title: "Remplissez le formulaire",
-    description: "2 minutes suffisent. Decrivez votre activite, votre profil et vos besoins.",
+    description:
+      "2 minutes suffisent. Decrivez votre activite, votre profil et vos besoins.",
     time: "2 min",
   },
   {
     icon: PhoneCall,
     number: "02",
     title: "Un courtier vous rappelle",
-    description: "Notre expert BTP analyse votre dossier et compare les offres de +30 assureurs.",
+    description:
+      "Notre expert BTP analyse votre dossier et compare les offres de +30 assureurs.",
     time: "15 min",
   },
   {
     icon: BadgeCheck,
     number: "03",
     title: "Recevez votre attestation",
-    description: "Votre attestation decennale vous est envoyee. Vous pouvez demarrer vos chantiers.",
+    description:
+      "Votre attestation decennale vous est envoyee. Vous pouvez demarrer vos chantiers.",
     time: "48h",
   },
 ];
@@ -84,12 +140,16 @@ function HowItWorksContent() {
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-3">
-                  <h3 className="text-lg font-semibold text-neutral-900">{step.title}</h3>
+                  <h3 className="text-lg font-semibold text-neutral-900">
+                    {step.title}
+                  </h3>
                   <span className="rounded-full bg-neutral-900 px-3 py-0.5 text-xs font-medium text-white">
                     {step.time}
                   </span>
                 </div>
-                <p className="mt-1.5 text-base text-neutral-500">{step.description}</p>
+                <p className="mt-1.5 text-base text-neutral-500">
+                  {step.description}
+                </p>
               </div>
             </div>
           ))}
@@ -106,42 +166,48 @@ function HowItWorksContent() {
   );
 }
 
-/* ── Panel 2 content: Guarantees ── */
+/* ── Panel 3 content: Guarantees ── */
 const guarantees = [
   {
     icon: Shield,
     title: "Garantie decennale",
-    description: "Couvre pendant 10 ans tous les dommages compromettant la solidite de l'ouvrage ou le rendant impropre a sa destination.",
+    description:
+      "Couvre pendant 10 ans tous les dommages compromettant la solidite de l'ouvrage ou le rendant impropre a sa destination.",
     badge: "10 ans",
   },
   {
     icon: Scale,
     title: "RC Professionnelle",
-    description: "Couvre les dommages causes aux tiers pendant l'execution des travaux : degats chez un voisin, blessure sur chantier.",
+    description:
+      "Couvre les dommages causes aux tiers pendant l'execution des travaux : degats chez un voisin, blessure sur chantier.",
     badge: "Incluse",
   },
   {
     icon: Wrench,
     title: "Garantie biennale",
-    description: "Couvre pendant 2 ans les equipements dissociables : chauffe-eau, radiateurs, volets, pompes a chaleur.",
+    description:
+      "Couvre pendant 2 ans les equipements dissociables : chauffe-eau, radiateurs, volets, pompes a chaleur.",
     badge: "2 ans",
   },
   {
     icon: Building,
     title: "Gros oeuvre et structure",
-    description: "Fondations, ossature, murs porteurs, charpente, toiture. Tout ce qui touche a la solidite du batiment.",
+    description:
+      "Fondations, ossature, murs porteurs, charpente, toiture. Tout ce qui touche a la solidite du batiment.",
     badge: "Structure",
   },
   {
     icon: FileCheck,
     title: "Ouvrages indissociables",
-    description: "Canalisations encastrees, planchers, plafonds, chauffage central, installation electrique encastree.",
+    description:
+      "Canalisations encastrees, planchers, plafonds, chauffage central, installation electrique encastree.",
     badge: "Complet",
   },
   {
     icon: AlertTriangle,
     title: "Sans assurance : les risques",
-    description: "Sanctions penales, interdiction d'exercer, prise en charge financiere des reparations, perte de credibilite.",
+    description:
+      "Sanctions penales, interdiction d'exercer, prise en charge financiere des reparations, perte de credibilite.",
     badge: "Obligatoire",
   },
 ];
@@ -154,7 +220,9 @@ function GuaranteesContent() {
           Ce que couvre la garantie decennale
         </h2>
         <p className="mt-4 max-w-2xl text-lg text-neutral-500">
-          Tout constructeur est responsable des desordres compromettant la solidite de l&apos;ouvrage, pendant 10 ans apres reception des travaux.
+          Tout constructeur est responsable des desordres compromettant la
+          solidite de l&apos;ouvrage, pendant 10 ans apres reception des
+          travaux.
         </p>
       </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -171,8 +239,12 @@ function GuaranteesContent() {
                 {g.badge}
               </span>
             </div>
-            <h3 className="text-base font-semibold text-neutral-900">{g.title}</h3>
-            <p className="mt-2 text-sm leading-relaxed text-neutral-500">{g.description}</p>
+            <h3 className="text-base font-semibold text-neutral-900">
+              {g.title}
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-neutral-500">
+              {g.description}
+            </p>
           </div>
         ))}
       </div>
@@ -180,16 +252,16 @@ function GuaranteesContent() {
   );
 }
 
-/* ── Panel 3 content: Metiers ── */
+/* ── Panel 4 content: Metiers ── */
 const metiers = [
-  { icon: Hammer, name: "Macon", type: "Gros oeuvre", obligatoire: true },
-  { icon: Zap, name: "Electricien", type: "Second oeuvre", obligatoire: true },
-  { icon: Droplets, name: "Plombier / Chauffagiste", type: "Second oeuvre", obligatoire: true },
-  { icon: Home, name: "Couvreur / Zingueur", type: "Gros oeuvre", obligatoire: true },
-  { icon: Wrench, name: "Menuisier", type: "Second oeuvre", obligatoire: true },
-  { icon: Layers, name: "Carreleur", type: "Finitions", obligatoire: true },
-  { icon: HardHat, name: "Charpentier", type: "Gros oeuvre", obligatoire: true },
-  { icon: Building, name: "Platrier / Plaquiste", type: "Second oeuvre", obligatoire: true },
+  { icon: Hammer, name: "Macon", type: "Gros oeuvre" },
+  { icon: Zap, name: "Electricien", type: "Second oeuvre" },
+  { icon: Droplets, name: "Plombier / Chauffagiste", type: "Second oeuvre" },
+  { icon: Home, name: "Couvreur / Zingueur", type: "Gros oeuvre" },
+  { icon: Wrench, name: "Menuisier", type: "Second oeuvre" },
+  { icon: Layers, name: "Carreleur", type: "Finitions" },
+  { icon: HardHat, name: "Charpentier", type: "Gros oeuvre" },
+  { icon: Building, name: "Platrier / Plaquiste", type: "Second oeuvre" },
 ];
 
 function MetiersContent() {
@@ -201,7 +273,8 @@ function MetiersContent() {
             Tous les metiers du BTP
           </h2>
           <p className="mt-4 text-lg text-neutral-500">
-            Chaque metier a des risques specifiques. Nous assurons tous les corps d&apos;etat.
+            Chaque metier a des risques specifiques. Nous assurons tous les
+            corps d&apos;etat.
           </p>
           <a
             href="/devis"
@@ -222,7 +295,9 @@ function MetiersContent() {
                   <m.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-neutral-900">{m.name}</p>
+                  <p className="text-sm font-semibold text-neutral-900">
+                    {m.name}
+                  </p>
                   <div className="mt-0.5 flex items-center gap-2">
                     <span className="text-xs text-neutral-400">{m.type}</span>
                     <span className="rounded-full bg-neutral-900 px-2 py-0.5 text-[10px] font-medium text-white">
