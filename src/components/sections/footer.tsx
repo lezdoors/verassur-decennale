@@ -2,9 +2,10 @@
 
 import { motion } from "motion/react";
 import Link from "next/link";
-import { Shield, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -23,9 +24,8 @@ export function Footer() {
       >
         {/* Brand */}
         <div className="space-y-4">
-          <Link href="/" className="flex items-center space-x-3">
-            <Shield className="h-5 w-5 text-white" />
-            <span className="font-bold text-xl text-white">AssureNao</span>
+          <Link href="/">
+            <Logo variant="light" className="h-7 w-auto" />
           </Link>
           <p className="text-sm text-neutral-500">
             Courtier agree ORIAS, specialise en assurance decennale pour les

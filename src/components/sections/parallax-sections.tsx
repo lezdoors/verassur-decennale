@@ -22,36 +22,36 @@ import {
 export function ParallaxSections() {
   return (
     <div className="bg-white">
-      {/* Panel 1: Hero — modern building, clean architecture */}
+      {/* Panel 1: Hero — French building facade, golden hour */}
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80"
+        imgUrl="https://images.unsplash.com/photo-1576762846960-c6f1dcffade1?w=1920&q=80"
         subheading="Assurance decennale BTP"
         heading="Votre garantie, simplement."
       >
         <HeroContent />
       </TextParallaxContent>
 
-      {/* Panel 2: How it works — team on construction site */}
+      {/* Panel 2: How it works — architect drafting blueprints */}
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80"
+        imgUrl="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=1920&q=80"
         subheading="Simple et rapide"
         heading="3 etapes. C'est tout."
       >
         <HowItWorksContent />
       </TextParallaxContent>
 
-      {/* Panel 3: Guarantees — building under construction, cranes */}
+      {/* Panel 3: Guarantees — modern apartment building facade */}
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80"
+        imgUrl="https://images.unsplash.com/photo-1755896487242-23cb0847e493?w=1920&q=80"
         subheading="Loi Spinetta — Article L.241-1"
         heading="Vos garanties."
       >
         <GuaranteesContent />
       </TextParallaxContent>
 
-      {/* Panel 4: Metiers — worker with hard hat, close-up */}
+      {/* Panel 4: Metiers — professional tradesperson */}
       <TextParallaxContent
-        imgUrl="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&q=80"
+        imgUrl="https://images.unsplash.com/photo-1581092570490-cc40829efaae?w=1920&q=80"
         subheading="Tous corps de metier"
         heading="Votre metier, couvert."
       >
