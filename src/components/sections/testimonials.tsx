@@ -10,7 +10,6 @@ const testimonials = [
     city: "Lyon",
     rating: 5,
     text: "Apres plusieurs comparatifs infructueux, je me suis tourne vers AssureNao qui a fait le boulot avec rapidite et efficacite. Attestation recue en 2 jours.",
-    tag: "Decennale",
   },
   {
     name: "Sophie M.",
@@ -18,7 +17,6 @@ const testimonials = [
     city: "Marseille",
     rating: 5,
     text: "Resiliee par mon ancien assureur suite a un sinistre, AssureNao a pris le temps d'etudier mon dossier et m'a trouve une solution adaptee en moins de 48h.",
-    tag: "Resiliee",
   },
   {
     name: "Antoine R.",
@@ -26,7 +24,6 @@ const testimonials = [
     city: "Paris",
     rating: 5,
     text: "Le courtier m'a rappele en 15 minutes. Il connaissait parfaitement les besoins d'un peintre en batiment. Devis clair, pas de mauvaises surprises. Je recommande.",
-    tag: "Entreprise",
   },
   {
     name: "Nadia K.",
@@ -34,13 +31,12 @@ const testimonials = [
     city: "Bordeaux",
     rating: 5,
     text: "Apres 3 refus d'assureurs classiques a cause de mon malus, AssureNao m'a trouvee une couverture complete en 48h. Service impeccable et tarif correct.",
-    tag: "Malussee",
   },
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-20 sm:py-28" style={{ background: "#FFFFFF" }}>
+    <section className="bg-neutral-50 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,32 +45,15 @@ export function Testimonials() {
           transition={{ duration: 0.5 }}
           className="text-center"
         >
-          <span
-            className="inline-block px-4 py-1.5 text-xs font-medium uppercase tracking-wider mb-4"
-            style={{ color: "#D4AF37" }}
-          >
+          <p className="mb-3 text-sm font-medium uppercase tracking-widest text-neutral-400">
             Avis clients
-          </span>
-          <h2
-            className="text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl"
-            style={{ color: "#111827" }}
-          >
+          </p>
+          <h2 className="text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl lg:text-5xl">
             Ils nous font confiance
           </h2>
-          <p
-            className="mt-4 text-base"
-            style={{ color: "#6B7280" }}
-          >
-            Ce que nos clients disent de nous
-          </p>
-          {/* Stars */}
           <div className="mt-4 flex items-center justify-center gap-1">
             {[1, 2, 3, 4, 5].map((s) => (
-              <Star
-                key={s}
-                className="h-5 w-5"
-                style={{ fill: "#D4AF37", color: "#D4AF37" }}
-              />
+              <Star key={s} className="h-5 w-5 fill-amber-400 text-amber-400" />
             ))}
           </div>
         </motion.div>
@@ -87,66 +66,27 @@ export function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.5 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="group relative p-7 transition-all"
-              style={{
-                background: "#FFFFFF",
-                border: "1px solid #E5E7EB",
-                boxShadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
-              }}
+              className="rounded-xl border border-neutral-200 bg-white p-7 transition-all hover:shadow-md"
             >
-              {/* Tag */}
-              <span
-                className="absolute right-5 top-5 px-3 py-1 text-[11px] font-medium uppercase tracking-wider"
-                style={{
-                  background: "rgba(212, 175, 55, 0.1)",
-                  color: "#D4AF37",
-                }}
-              >
-                {t.tag}
-              </span>
+              <Quote className="mb-4 h-6 w-6 text-neutral-200" />
 
-              {/* Quote icon */}
-              <Quote
-                className="mb-4 h-6 w-6"
-                style={{ color: "#E5E7EB" }}
-              />
-
-              {/* Stars */}
               <div className="mb-4 flex gap-0.5">
                 {Array.from({ length: t.rating }).map((_, si) => (
-                  <Star
-                    key={si}
-                    className="h-3.5 w-3.5"
-                    style={{ fill: "#D4AF37", color: "#D4AF37" }}
-                  />
+                  <Star key={si} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
 
-              {/* Quote */}
-              <p
-                className="text-sm leading-relaxed"
-                style={{ color: "#374151" }}
-              >
+              <p className="text-base leading-relaxed text-neutral-600">
                 &ldquo;{t.text}&rdquo;
               </p>
 
-              {/* Author */}
               <div className="mt-6 flex items-center gap-3">
-                <div
-                  className="flex h-10 w-10 items-center justify-center text-sm font-medium"
-                  style={{ background: "rgba(212, 175, 55, 0.15)", color: "#D4AF37" }}
-                >
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-sm font-semibold text-white">
                   {t.name[0]}
                 </div>
                 <div>
-                  <p className="text-sm font-medium" style={{ color: "#111827" }}>
-                    {t.name}
-                  </p>
-                  <p
-                    className="text-xs"
-                    style={{ color: "#6B7280" }}
-                  >
+                  <p className="text-sm font-semibold text-neutral-900">{t.name}</p>
+                  <p className="text-xs text-neutral-400">
                     {t.role} &middot; {t.city}
                   </p>
                 </div>

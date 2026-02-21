@@ -1,20 +1,11 @@
 "use client";
 
 import { motion } from "motion/react";
-import { ArrowRight, Phone, Shield } from "lucide-react";
+import { ArrowUpRight, Phone, Shield } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section id="devis" className="relative overflow-hidden py-20 sm:py-28" style={{ background: "#111827" }}>
-      {/* Decorative gradient */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            "radial-gradient(ellipse 60% 50% at 50% 50%, rgba(212, 175, 55, 0.06) 0%, transparent 70%)",
-        }}
-      />
-
+    <section className="relative overflow-hidden bg-neutral-900 py-20 sm:py-28">
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -22,17 +13,11 @@ export function FinalCTA() {
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <Shield
-            className="mx-auto mb-6 h-10 w-10"
-            style={{ color: "#D4AF37" }}
-          />
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl lg:text-5xl">
+          <Shield className="mx-auto mb-6 h-10 w-10 text-white/40" />
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
             Pret a proteger vos chantiers ?
           </h2>
-          <p
-            className="mx-auto mt-5 max-w-lg text-base leading-relaxed"
-            style={{ color: "rgba(255,255,255,0.5)" }}
-          >
+          <p className="mx-auto mt-5 max-w-lg text-base leading-relaxed text-neutral-400">
             Obtenez votre devis personnalise en 2 minutes. Gratuit, sans
             engagement, et avec un courtier dedie a votre dossier.
           </p>
@@ -47,30 +32,20 @@ export function FinalCTA() {
         >
           <a
             href="/devis"
-            className="inline-flex items-center gap-2 rounded-sm px-8 py-4 text-base font-medium transition-all hover:scale-105"
-            style={{
-              background: "#D4AF37",
-              color: "#111827",
-              boxShadow: "0 0 40px rgba(212, 175, 55, 0.3)",
-            }}
+            className="inline-flex items-center gap-2 rounded-lg bg-white px-8 py-4 text-base font-semibold text-neutral-900 transition-all hover:bg-neutral-100"
           >
             Obtenir mon devis gratuit
-            <ArrowRight className="h-4 w-4" />
+            <ArrowUpRight className="h-4 w-4" />
           </a>
           <a
             href="tel:0644657005"
-            className="inline-flex items-center gap-2.5 px-8 py-4 text-base font-medium transition-all hover:text-white"
-            style={{
-              border: "1px solid rgba(255,255,255,0.15)",
-              color: "rgba(255,255,255,0.6)",
-            }}
+            className="inline-flex items-center gap-2.5 rounded-lg border border-neutral-700 px-8 py-4 text-base font-medium text-neutral-400 transition-all hover:border-neutral-500 hover:text-white"
           >
-            <Phone className="h-4 w-4" style={{ color: "#D4AF37" }} />
+            <Phone className="h-4 w-4" />
             06 44 65 70 05
           </a>
         </motion.div>
 
-        {/* Stats bar */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -85,13 +60,8 @@ export function FinalCTA() {
             { value: "BTP", label: "tous metiers" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-xl font-medium" style={{ color: "#D4AF37" }}>
-                {stat.value}
-              </p>
-              <p
-                className="text-[11px] font-medium uppercase tracking-wider"
-                style={{ color: "rgba(255,255,255,0.3)" }}
-              >
+              <p className="text-xl font-bold text-white">{stat.value}</p>
+              <p className="text-[11px] font-medium uppercase tracking-wider text-neutral-500">
                 {stat.label}
               </p>
             </div>
@@ -103,8 +73,7 @@ export function FinalCTA() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5, duration: 0.5 }}
-          className="mt-10 text-xs"
-          style={{ color: "rgba(255,255,255,0.25)" }}
+          className="mt-10 text-xs text-neutral-600"
         >
           Courtier agree ORIAS N° 25004749 &middot; Gratuit et sans engagement
           &middot; Rappel sous 24h
