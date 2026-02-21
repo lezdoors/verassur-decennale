@@ -22,7 +22,7 @@ function Initials({ name, className }: { name: string; className?: string }) {
     .slice(0, 2);
   return (
     <div
-      className={`flex items-center justify-center rounded-full bg-teal-600 text-sm font-semibold text-white ${className ?? "size-12"}`}
+      className={`flex items-center justify-center rounded-full bg-violet-600 text-sm font-semibold text-white ${className ?? "size-12"}`}
     >
       {initials}
     </div>

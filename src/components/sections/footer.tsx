@@ -34,7 +34,7 @@ export function Footer() {
           </p>
           <a
             href="tel:0644657005"
-            className="inline-flex items-center gap-2 rounded-lg bg-teal-600 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-teal-700"
+            className="inline-flex items-center gap-2 rounded-lg bg-violet-600 px-4 py-2 text-sm font-medium text-white transition-all hover:bg-violet-700"
           >
             <Phone className="h-3.5 w-3.5" />
             06 44 65 70 05
@@ -43,7 +43,7 @@ export function Footer() {
 
         {/* Nos assurances */}
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-violet-400">
             Nos assurances
           </h3>
           <nav className="mt-4 flex flex-col space-y-2.5 text-sm">
@@ -56,7 +56,7 @@ export function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-violet-400">
             Contact
           </h3>
           <nav className="mt-4 flex flex-col space-y-3 text-sm">
@@ -77,7 +77,7 @@ export function Footer() {
 
         {/* Newsletter */}
         <div className="space-y-4">
-          <h3 className="text-xs font-semibold uppercase tracking-wider text-teal-400">
+          <h3 className="text-xs font-semibold uppercase tracking-wider text-violet-400">
             Restez informe
           </h3>
           <p className="text-sm text-neutral-500">
@@ -91,7 +91,7 @@ export function Footer() {
             />
             <Button
               type="submit"
-              className="rounded-lg bg-teal-600 font-medium text-white hover:bg-teal-700"
+              className="rounded-lg bg-violet-600 font-medium text-white hover:bg-violet-700"
             >
               OK
             </Button>

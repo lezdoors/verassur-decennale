@@ -19,14 +19,14 @@ export function ChatbotBubble() {
             className="mb-3 w-80 rounded-2xl border border-neutral-200 bg-white shadow-2xl"
           >
             {/* Header */}
-            <div className="flex items-center justify-between rounded-t-2xl bg-teal-600 px-5 py-4">
+            <div className="flex items-center justify-between rounded-t-2xl bg-violet-600 px-5 py-4">
               <div className="flex items-center gap-3">
                 <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20">
                   <MessageCircle className="h-4 w-4 text-white" />
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">AssureNao</p>
-                  <p className="text-xs text-teal-200">
+                  <p className="text-xs text-violet-200">
                     Reponse sous 24h
                   </p>
                 </div>
@@ -51,16 +51,16 @@ export function ChatbotBubble() {
               <div className="mt-4 space-y-2">
                 <a
                   href="/devis"
-                  className="flex items-center gap-3 rounded-xl border border-neutral-200 p-3 text-sm font-medium text-neutral-700 transition-all hover:border-teal-200 hover:bg-teal-50"
+                  className="flex items-center gap-3 rounded-xl border border-neutral-200 p-3 text-sm font-medium text-neutral-700 transition-all hover:border-violet-200 hover:bg-violet-50"
                 >
-                  <Send className="h-4 w-4 text-teal-600" />
+                  <Send className="h-4 w-4 text-violet-600" />
                   Obtenir un devis gratuit
                 </a>
                 <a
                   href="tel:0644657005"
-                  className="flex items-center gap-3 rounded-xl border border-neutral-200 p-3 text-sm font-medium text-neutral-700 transition-all hover:border-teal-200 hover:bg-teal-50"
+                  className="flex items-center gap-3 rounded-xl border border-neutral-200 p-3 text-sm font-medium text-neutral-700 transition-all hover:border-violet-200 hover:bg-violet-50"
                 >
-                  <Phone className="h-4 w-4 text-teal-600" />
+                  <Phone className="h-4 w-4 text-violet-600" />
                   Appeler le 06 44 65 70 05
                 </a>
               </div>
@@ -78,7 +78,7 @@ export function ChatbotBubble() {
         onClick={() => setIsOpen(!isOpen)}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-teal-600 text-white shadow-lg transition-shadow hover:shadow-xl"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-violet-600 text-white shadow-lg transition-shadow hover:shadow-xl"
       >
         <AnimatePresence mode="wait">
           {isOpen ? (

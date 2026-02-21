@@ -34,7 +34,7 @@ export function Header() {
           </a>
           <Link
             href="/devis"
-            className="rounded-lg bg-teal-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-teal-700"
+            className="rounded-lg bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-violet-700"
           >
             Devis gratuit
           </Link>
