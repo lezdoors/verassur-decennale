@@ -45,13 +45,14 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  /* Golden Twilight palette */
-  --color-navy: #000814;
-  --color-navy-mid: #001D3D;
-  --color-navy-light: #003566;
-  --color-gold: #FFC300;
-  --color-gold-light: #FFD60A;
-  --color-gold-dark: #E0AC00;
+  /* Sunny Beach Day palette */
+  --color-navy: #264653;
+  --color-navy-mid: #1D3A43;
+  --color-navy-light: #2A9D8F;
+  --color-gold: #E9C46A;
+  --color-gold-light: #F4A261;
+  --color-gold-dark: #D4B05E;
+  --color-peach: #E76F51;
 
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
