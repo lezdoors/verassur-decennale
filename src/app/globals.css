@@ -48,10 +48,10 @@
   /* Sunny Beach Day palette */
   --color-navy: #264653;
   --color-navy-mid: #1D3A43;
-  --color-navy-light: #2A9D8F;
-  --color-gold: #E9C46A;
+  --color-navy-light: #2EC4B6;
+  --color-gold: #F77F00;
   --color-gold-light: #F4A261;
-  --color-gold-dark: #D4B05E;
+  --color-gold-dark: #E76F51;
   --color-peach: #E76F51;
 
   --animate-marquee: marquee var(--duration) infinite linear;
